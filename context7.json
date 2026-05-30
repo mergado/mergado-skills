@@ -1,0 +1,15 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "Mergado Asistent",
+  "description": "Průvodce pro uživatele Mergado Editoru: feedy, Google Shopping, Heureka, Zboží, Meta, Glami, GMC chyby, optimalizace a onboarding e-shopu. Překládá jazyk problémů majitele e-shopu do konkrétních akcí v Mergadu.",
+  "folders": [
+    "plugins/mergado-asistent/skills/mergado-asistent"
+  ],
+  "excludeFolders": [
+    ".claude-plugin"
+  ],
+  "rules": [
+    "Obsah je v češtině a popisuje práci s produktovými feedy v nástroji Mergado.",
+    "SKILL.md je vstupní bod; references/ obsahují detailní playbooky, slovník pojmů, recepty na pravidla a specifika reklamních platforem."
+  ]
+}

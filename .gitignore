@@ -1,0 +1,9 @@
+# OS / cloud-sync junk
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# editor
+.idea/
+.vscode/
+*.swp

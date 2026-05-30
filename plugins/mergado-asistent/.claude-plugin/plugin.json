@@ -1,0 +1,17 @@
+{
+  "name": "mergado-asistent",
+  "version": "1.0.0",
+  "description": "Asistent pro uživatele Mergado Editoru — překládá jazyk problémů do akcí přes Mergado MCP. Nejdřív se zorientuje v projektu, poradí v termínech majitele e-shopu, a teprve po potvrzení provede změny.",
+  "author": {
+    "name": "Mergado"
+  },
+  "homepage": "https://github.com/mergado/mergado-skills",
+  "keywords": [
+    "mergado",
+    "feed",
+    "google-shopping",
+    "heureka",
+    "product-feed",
+    "skill"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "mergado-skills",
+  "owner": {
+    "name": "Mergado",
+    "url": "https://github.com/mergado"
+  },
+  "metadata": {
+    "description": "Mergado Claude skills marketplace — sdílené dovednosti pro práci s Mergado Editorem a feedy.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "mergado-asistent",
+      "source": "./plugins/mergado-asistent",
+      "description": "Asistent pro uživatele Mergado Editoru — překládá jazyk problémů (chyby v Google Shopping, doplnění barev, nezobrazený produkt) do akcí přes Mergado MCP.",
+      "version": "1.0.0",
+      "category": "productivity"
+    }
+  ]
+}

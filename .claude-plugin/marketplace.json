@@ -1,12 +1,10 @@
 {
   "name": "mergado-skills",
+  "description": "Mergado Claude skills marketplace — sdílené dovednosti pro práci s Mergado Editorem a feedy.",
+  "version": "1.0.0",
   "owner": {
     "name": "Mergado",
     "url": "https://github.com/mergado"
-  },
-  "metadata": {
-    "description": "Mergado Claude skills marketplace — sdílené dovednosti pro práci s Mergado Editorem a feedy.",
-    "version": "1.0.0"
   },
   "plugins": [
     {
@@ -18,3 +16,4 @@
     }
   ]
 }
+

@@ -1,59 +1,59 @@
 # Mergado Skills
 
-Sdílené [Claude](https://claude.com/claude-code) dovednosti (skills) pro práci s **Mergado Editorem** a produktovými feedy. Repo slouží zároveň jako **Claude plugin marketplace** a jako **zdroj dokumentace pro [Context7](https://context7.com)**.
+Shared [Claude Code](https://code.claude.com) skills for working with **Mergado Editor** and product feeds. This repository serves as both a **Claude plugin marketplace** and a **documentation source for [Context7](https://context7.com)**.
 
-## Obsah
+## Plugins
 
-| Plugin | Popis |
+| Plugin | Description |
 |---|---|
-| **mergado-asistent** | Asistent pro uživatele Mergado Editoru — překládá jazyk problémů (chyby v Google Shopping, doplnění barev, nezobrazený produkt) do akcí přes Mergado MCP. Nejdřív se zorientuje v projektu, poradí v termínech majitele e-shopu a teprve po potvrzení provede změny. |
+| **mergado-asistent** v2.0.0 | Assistant for Mergado Editor users — translates real business problems (Google Shopping errors, missing colours, hidden products) into actions via the Mergado MCP. Familiarizes itself with the project first, advises using e-shop owner terminology, and only executes changes after user confirmation. |
 
-## Instalace do Claude Code
+## Installation in Claude Code
 
 ```text
 /plugin marketplace add mergado/mergado-skills
 /plugin install mergado-asistent@mergado-skills
 ```
 
-Po instalaci se skill `mergado-asistent` aktivuje automaticky, kdykoli uživatel mluví o feedu, produktech, Google Shopping / Heureka / Zboží / Meta / Glami, GMC chybách, optimalizaci feedu nebo importu nového e-shopu.
+Once installed, the `mergado-asistent` skill activates automatically whenever the user talks about feeds, products, Google Shopping / Heureka / Zboží / Meta / Glami, GMC errors, feed optimization, or onboarding a new e-shop.
 
-> Skill využívá **Mergado MCP** server (čtení i zápis nad projekty uživatele). Pro plnou funkčnost je potřeba mít Mergado MCP nakonfigurovaný v Claude.
+> The skill requires the **Mergado MCP** server (read & write access to user projects). Make sure you have Mergado MCP configured in Claude for full functionality.
 
-## Použití přes Context7
+## Usage via Context7
 
-Repo je registrované na Context7 jako zdroj dokumentace. Přidání / refresh:
+This repository is registered on Context7 as a documentation source. To add or refresh:
 
-1. Otevři <https://context7.com/add-library?tab=github>
-2. Source = **GitHub**, vlož URL `https://github.com/mergado/mergado-skills`
+1. Open <https://context7.com/add-library?tab=github>
+2. Source = **GitHub**, paste URL `https://github.com/mergado/mergado-skills`
 3. **Submit**
 
-Context7 indexuje markdown ze složky definované v [`context7.json`](./context7.json) (`plugins/mergado-asistent/skills/mergado-asistent`).
+Context7 indexes markdown from the folder defined in [`context7.json`](./context7.json) (`plugins/mergado-asistent/skills/mergado-asistent`).
 
-## Struktura repa
+## Repository Structure
 
 ```text
 mergado-skills/
 ├── .claude-plugin/
-│   └── marketplace.json          # marketplace manifest (seznam pluginů)
+│   └── marketplace.json          # marketplace manifest (list of plugins)
 ├── plugins/
 │   └── mergado-asistent/
 │       ├── .claude-plugin/
-│       │   └── plugin.json        # manifest pluginu
+│       │   └── plugin.json        # plugin manifest
 │       └── skills/
 │           └── mergado-asistent/
-│               ├── SKILL.md       # vstupní bod skillu
-│               └── references/    # detailní playbooky a referenční materiály
-├── context7.json                  # konfigurace indexace pro Context7
+│               ├── SKILL.md       # skill entry point
+│               └── references/    # detailed playbooks and reference materials
+├── context7.json                  # Context7 indexing configuration
 ├── README.md
 └── LICENSE
 ```
 
-## Přidání dalšího skillu
+## Adding a New Skill
 
-1. Vytvoř `plugins/<nazev>/.claude-plugin/plugin.json` a `plugins/<nazev>/skills/<nazev>/SKILL.md`.
-2. Přidej položku do pole `plugins` v `.claude-plugin/marketplace.json`.
-3. (Volitelně) rozšiř `folders` v `context7.json`.
+1. Create `plugins/<name>/.claude-plugin/plugin.json` and `plugins/<name>/skills/<name>/SKILL.md`.
+2. Add an entry to the `plugins` array in `.claude-plugin/marketplace.json`.
+3. (Optional) Extend `folders` in `context7.json`.
 
-## Licence
+## License
 
 [MIT](./LICENSE) © Mergado s.r.o.

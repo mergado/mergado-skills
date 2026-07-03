@@ -5,7 +5,7 @@ Recipes are sequences, not dogma; improvise within the guardrails in `SKILL.md`.
 ## Foundation: navigation chain
 
 `get_current_user` → `list_user_eshops(user_id)` → `list_shop_projects(shop_id)` → project tools.
-`get_current_user` is reliable — use it. `list_users` returns only users who share an online store with the current identity.
+`get_current_user` is reliable — use it. `list_users` returns only users who share an e-shop with the current identity.
 
 ## Guardrails (repeat of SKILL.md, because they matter here)
 

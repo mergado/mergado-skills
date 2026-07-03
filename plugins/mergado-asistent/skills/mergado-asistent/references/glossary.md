@@ -6,7 +6,7 @@ Use **only** these English terms. They are taken from the official English Knowl
 
 | Concept | Official EN term | Note |
 |---|---|---|
-| Projekt | **Project** | one output setup for one online store |
+| Projekt | **Project** | one output setup for one e-shop |
 | Vstupní feed / vstupní data | **Input feed** (input data) | original data downloaded from the store; not modified |
 | Výstupní feed / výstup | **Output feed** (modified data) | final feed after rules, per platform |
 | Produkt(y) | **Product(s)** | |

@@ -1,17 +1,10 @@
 {
-  "$schema": "https://context7.com/schema/context7.json",
   "url": "https://context7.com/mergado/mergado-skills",
   "public_key": "pk_o0NYy3vOeRGVA4ENJxdrt",
-  "projectTitle": "Mergado Assistant",
-  "description": "Guide for Mergado Editor users: feeds, Google Shopping, Heureka, Zboží, Meta, Glami, GMC errors, optimization and e-shop onboarding. Translates the e-shop owner's business problems into concrete actions in Mergado.",
   "folders": [
     "plugins/mergado-asistent/skills/mergado-asistent"
   ],
   "excludeFolders": [
     ".claude-plugin"
-  ],
-  "rules": [
-    "The content describes working with product feeds in the Mergado tool.",
-    "SKILL.md is the entry point; references/ contains detailed playbooks, a glossary, recipes for rules, and specifics of advertising platforms."
   ]
 }

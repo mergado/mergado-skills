@@ -4,7 +4,7 @@ Every playbook follows the universal workflow: understand → orient (MCP) → d
 
 ## A. First contact / orientation
 1. `get_current_user`.
-2. `list_user_eshops(user_id)` → if several, ask which e-shop.
+2. `list_user_eshops(user_id)` → if several, ask which online store.
 3. `list_shop_projects(shop_id)` → identify the project (editing vs. conversion — see glossary).
 4. Summarise what you see in plain language before proposing anything.
 

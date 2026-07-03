@@ -6,7 +6,7 @@ Shared [Claude Code](https://code.claude.com) skills for working with **Mergado 
 
 | Plugin | Description |
 |---|---|
-| **mergado-asistent** v2.0.0 | Assistant for Mergado Editor users — translates real business problems (Google Shopping errors, missing colours, hidden products) into actions via the Mergado MCP. Familiarizes itself with the project first, advises using e-shop owner terminology, and only executes changes after user confirmation. |
+| **mergado-asistent** v2.0.0 | Assistant for Mergado Editor users — translates real business problems (Google Shopping errors, missing colours, hidden products) into actions via the Mergado MCP. Familiarizes itself with the project first, advises using online store owner terminology, and only executes changes after user confirmation. |
 
 ## Installation in Claude Code
 
@@ -15,7 +15,7 @@ Shared [Claude Code](https://code.claude.com) skills for working with **Mergado 
 /plugin install mergado-asistent@mergado-skills
 ```
 
-Once installed, the `mergado-asistent` skill activates automatically whenever the user talks about feeds, products, Google Shopping / Heureka / Zboží / Meta / Glami, GMC errors, feed optimization, or onboarding a new e-shop.
+Once installed, the `mergado-asistent` skill activates automatically whenever the user talks about feeds, products, Google Shopping / Heureka / Zboží / Meta / Glami, GMC errors, feed optimization, or onboarding a new online store.
 
 > The skill requires the **Mergado MCP** server (read & write access to user projects). Make sure you have Mergado MCP configured in Claude for full functionality.
 

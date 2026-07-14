@@ -1,7 +1,7 @@
 {
   "name": "mergado-asistent",
-  "version": "2.0.0",
-  "description": "Assistant for Mergado Editor users — translates real business problems with product feeds into concrete actions via the Mergado MCP. Familiarizes itself with the project first, advises using e-shop owner terminology, and only executes changes after user confirmation.",
+  "version": "2.1.0",
+  "description": "Assistant for Mergado Editor users — translates real business problems with product feeds into concrete actions via the Mergado MCP. Familiarizes itself with the project first, advises using online-store owner terminology, and only executes changes after user confirmation.",
   "author": {
     "name": "Mergado",
     "url": "https://github.com/mergado"

@@ -1,7 +1,7 @@
 {
   "name": "mergado-skills",
   "description": "Mergado Claude skills marketplace — shared skills for working with Mergado Editor and product feeds.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "owner": {
     "name": "Mergado",
     "url": "https://github.com/mergado"
@@ -11,7 +11,7 @@
       "name": "mergado-asistent",
       "source": "./plugins/mergado-asistent",
       "description": "Assistant for Mergado Editor users — translates real business problems (Google Shopping errors, missing colours, hidden products) into actions via the Mergado MCP.",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "category": "productivity"
     }
   ]

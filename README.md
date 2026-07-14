@@ -6,7 +6,7 @@ Shared [Claude Code](https://code.claude.com) skills for working with **Mergado 
 
 | Plugin | Description |
 |---|---|
-| **mergado-asistent** v2.0.0 | Assistant for Mergado Editor users — translates real business problems (Google Shopping errors, missing colours, hidden products) into actions via the Mergado MCP. Familiarizes itself with the project first, advises using e-shop owner terminology, and only executes changes after user confirmation. |
+| **mergado-asistent** v2.1.0 | Assistant for Mergado Editor users — translates real business problems (Google Shopping errors, missing colours, hidden products) into actions via the Mergado MCP. Familiarizes itself with the project first, advises using online-store owner terminology, and only executes changes after user confirmation. |
 
 ## Installation in Claude Code
 

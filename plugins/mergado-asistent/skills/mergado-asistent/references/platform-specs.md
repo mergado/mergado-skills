@@ -1,6 +1,6 @@
-# Platforms — current official specifications
+# Platform specifications
 
-Always link to the **current official specification** (a live page), not to a static copy. Verify the platform first (see `glossary.md`: editing vs. conversion). For the canonical Mergado-side format list use the MCP `list_supported_feed_formats` and `get_format_specification`.
+Always link the current official specification (a live page), not a static copy. Verify the platform first (editing vs. conversion). For the Mergado-side format list, use `list_supported_feed_formats` and `get_format_specification`.
 
 | Platform | Region | Official specification |
 |---|---|---|
@@ -21,8 +21,8 @@ Always link to the **current official specification** (a live page), not to a st
 | Árukereső (Compari) | HU | https://www.arukereso.hu/static/feed-requirements.html |
 
 ## Notes
-- **Meta** = source for **Instagram Shopping** too (same catalog).
+- **Meta** is also the source for **Instagram Shopping** (same catalog).
 - **Pinterest, TikTok, Microsoft/Bing** largely follow the Google Product Data Specification — reuse a Google feed and check for platform-specific deviations.
 - **Favi / Biano** have no public spec of their own — a Heureka-compatible feed works in most cases.
-- **Meta catalog + categories:** an automatic `format_converter` rule can translate categories into `g:google_product_category`, which Meta does not accept. There is no MCP way to pause a rule (no `update_rule`) — `delete_rule` or send the user to the UI, or feed Meta from a different project.
-- **Stale data on a platform:** Mergado only *publishes* the output feed; the platform fetches on its own schedule. Confirm Mergado regenerated (product-level `output_changed_at`; project `data_updated_at`), then tell the user to trigger a fetch on the platform (e.g. "Fetch now" in GMC).
+- **Category taxonomies for mapping:** Heureka category tree https://www.heureka.cz/direct/xml-export/shops/heureka-sekce.xml · Google product taxonomy with IDs — en-US https://www.google.com/basepages/producttype/taxonomy-with-ids.en-US.txt, cs-CZ https://www.google.com/basepages/producttype/taxonomy-with-ids.cs-CZ.txt (mapping recipe: `rules-cookbook.md`).
+- Spec URLs change over time — treat this list as a starting point and confirm on the platform's own site.

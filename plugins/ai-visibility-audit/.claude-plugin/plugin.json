@@ -1,0 +1,22 @@
+{
+  "name": "ai-visibility-audit",
+  "version": "1.0.0",
+  "description": "Audits an online store's readiness to be discovered, cited, and recommended by AI chat assistants and shopping agents (ChatGPT, Claude, Gemini, Perplexity, Google AI Overviews). Combines a live technical probe of the public website with internal data from every connected source — Mergado, Google Merchant Center, Search Console — into a single fixed-format report.",
+  "author": {
+    "name": "Mergado",
+    "url": "https://github.com/mergado"
+  },
+  "homepage": "https://github.com/mergado/mergado-skills",
+  "repository": "https://github.com/mergado/mergado-skills",
+  "license": "MIT",
+  "keywords": [
+    "mergado",
+    "ai-visibility",
+    "geo",
+    "aeo",
+    "generative-engine-optimization",
+    "structured-data",
+    "llms-txt",
+    "skill"
+  ]
+}

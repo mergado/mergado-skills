@@ -1,0 +1,193 @@
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+    <define name="nameDatatype">
+        <data type="string">
+            <param name="minLength">1</param>
+            <param name="maxLength">250</param>
+        </data>
+    </define>
+
+    <define name="variantValueDatatype">
+        <data type="string">
+            <param name="minLength">1</param>
+            <param name="maxLength">128</param>
+        </data>
+    </define>
+
+    <define name="nameAppendix">
+        <data type="string">
+            <param name="minLength">0</param>
+            <param name="maxLength">150</param>
+        </data>
+    </define>
+
+    <define name="manufacturerDatatype">
+        <data type="string">
+            <param name="maxLength">200</param>
+        </data>
+    </define>
+
+    <define name="supplierDatatype">
+        <data type="string">
+            <param name="maxLength">255</param>
+        </data>
+    </define>
+
+    <define name="warrantyDatatype">
+        <data type="string">
+            <param name="maxLength">100</param>
+        </data>
+    </define>
+
+    <define name="itemTypeDatatype">
+        <choice>
+            <value type="string">product</value>
+            <value type="string">bazaar</value>
+            <value type="string">service</value>
+            <value type="string">set</value>
+            <value type="string">deposit</value>
+        </choice>
+    </define>
+
+    <define name="productConditionGradeDatatype">
+        <choice>
+            <value type="string">open_box</value>
+            <value type="string">used</value>
+            <value type="string">refurbished</value>
+        </choice>
+    </define>
+
+    <define name="measureUnitTypeDatatype">
+        <choice>
+            <value type="string">pcs</value>
+            <value type="string">g</value>
+            <value type="string">kg</value>
+            <value type="string">t</value>
+            <value type="string">cm</value>
+            <value type="string">m</value>
+            <value type="string">cm2</value>
+            <value type="string">m2</value>
+            <value type="string">ml</value>
+            <value type="string">l</value>
+            <value type="string">cm3</value>
+            <value type="string">dm3</value>
+            <value type="string">m3</value>
+            <value type="string">tablet</value>
+            <value type="string">capsule</value>
+        </choice>
+    </define>
+
+    <define name="unitDatatype">
+        <data type="string">
+            <param name="maxLength">32</param>
+        </data>
+    </define>
+
+    <define name="codeDatatype">
+        <data type="string">
+            <param name="minLength">1</param>
+            <param name="maxLength">64</param>
+        </data>
+    </define>
+
+    <define name="eanDatatype">
+        <data type="string">
+            <param name="maxLength">255</param>
+        </data>
+    </define>
+
+    <define name="weightDatatype">
+        <data type="string">
+            <param name="maxLength">13</param>
+        </data>
+    </define>
+
+    <define name="currencyDatatype">
+        <choice>
+            <value type="string">CZK</value>
+            <value type="string">EUR</value>
+            <value type="string">AUD</value>
+            <value type="string">BGN</value>
+            <value type="string">BRL</value>
+            <value type="string">CAD</value>
+            <value type="string">CNY</value>
+            <value type="string">DKK</value>
+            <value type="string">GBP</value>
+            <value type="string">HKD</value>
+            <value type="string">HRK</value>
+            <value type="string">HUF</value>
+            <value type="string">CHF</value>
+            <value type="string">IDR</value>
+            <value type="string">ILS</value>
+            <value type="string">INR</value>
+            <value type="string">ISK</value>
+            <value type="string">JPY</value>
+            <value type="string">KRW</value>
+            <value type="string">MXN</value>
+            <value type="string">MYR</value>
+            <value type="string">NOK</value>
+            <value type="string">NZD</value>
+            <value type="string">PHP</value>
+            <value type="string">PLN</value>
+            <value type="string">RON</value>
+            <value type="string">RUB</value>
+            <value type="string">SEK</value>
+            <value type="string">SGD</value>
+            <value type="string">THB</value>
+            <value type="string">TRY</value>
+            <value type="string">USD</value>
+            <value type="string">VND</value>
+            <value type="string">XDR</value>
+            <value type="string">ZAR</value>
+            <value type="string">AED</value>
+        </choice>
+    </define>
+
+    <define name="vatDatatype">
+        <data type="decimal">
+            <param name="minInclusive">0.00</param>
+            <param name="maxInclusive">100.00</param>
+            <param name="fractionDigits">2</param>
+        </data>
+    </define>
+
+    <define name="priceDatatype">
+        <data type="decimal">
+            <param name="minInclusive">0</param>
+            <param name="totalDigits">12</param>
+            <param name="fractionDigits">2</param>
+        </data>
+    </define>
+
+    <define name="unsignedAmountDatatype">
+        <data type="decimal">
+            <param name="maxExclusive">10000000</param>
+            <param name="minExclusive">0</param>
+            <param name="fractionDigits">3</param>
+        </data>
+    </define>
+
+    <define name="amountDatatype">
+        <data type="decimal">
+            <param name="maxExclusive">10000000</param>
+            <param name="minExclusive">-10000000</param>
+            <param name="fractionDigits">3</param>
+        </data>
+    </define>
+
+    <define name="setItemAmountDatatype">
+        <data type="decimal">
+            <param name="minExclusive">0</param>
+            <param name="totalDigits">12</param>
+            <param name="fractionDigits">3</param>
+        </data>
+    </define>
+
+    <define name="availabilityDatatype">
+        <data type="string">
+            <param name="maxLength">100</param>
+        </data>
+    </define>
+
+</grammar>

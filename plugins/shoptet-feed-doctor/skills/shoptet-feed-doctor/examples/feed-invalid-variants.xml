@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  TEST FEED: deliberately invalid feed for Shoptet XML validation.
+  Format: Shoptet complete (products-complete-v10).
+  Purpose: trigger validator error messages for typical variant element-placement mistakes.
+  Each SHOPITEM isolates one error. The first item is a valid control sample.
+-->
+<SHOP>
+
+  <!-- ============================================================= -->
+  <!-- ITEM 0 — VALID CONTROL (must pass)                            -->
+  <!-- Variant product: sales data and PARAMETERS inside VARIANT.    -->
+  <!-- ============================================================= -->
+  <SHOPITEM>
+    <NAME>Tričko Basic (validní)</NAME>
+    <VISIBILITY>visible</VISIBILITY>
+    <UNIT>ks</UNIT>
+    <VARIANTS>
+      <VARIANT>
+        <CODE>TRIKO-CERV-S</CODE>
+        <EAN>8590000000011</EAN>
+        <CURRENCY>CZK</CURRENCY>
+        <PRICE>299.00</PRICE>
+        <STOCK>
+          <AMOUNT>5</AMOUNT>
+        </STOCK>
+        <AVAILABILITY>Skladem</AVAILABILITY>
+        <VISIBLE>1</VISIBLE>
+        <PARAMETERS>
+          <PARAMETER>
+            <NAME>Barva</NAME>
+            <VALUE>červená</VALUE>
+          </PARAMETER>
+          <PARAMETER>
+            <NAME>Velikost</NAME>
+            <VALUE>S</VALUE>
+          </PARAMETER>
+        </PARAMETERS>
+      </VARIANT>
+      <VARIANT>
+        <CODE>TRIKO-CERV-M</CODE>
+        <EAN>8590000000012</EAN>
+        <CURRENCY>CZK</CURRENCY>
+        <PRICE>299.00</PRICE>
+        <STOCK>
+          <AMOUNT>3</AMOUNT>
+        </STOCK>
+        <AVAILABILITY>Skladem</AVAILABILITY>
+        <VISIBLE>1</VISIBLE>
+        <PARAMETERS>
+          <PARAMETER>
+            <NAME>Barva</NAME>
+            <VALUE>červená</VALUE>
+          </PARAMETER>
+          <PARAMETER>
+            <NAME>Velikost</NAME>
+            <VALUE>M</VALUE>
+          </PARAMETER>
+        </PARAMETERS>
+      </VARIANT>
+    </VARIANTS>
+  </SHOPITEM>
+
+  <!-- ============================================================= -->
+  <!-- ITEM 1 — ERROR A: sales data at ITEM LEVEL on a variant       -->
+  <!-- product. CODE/PRICE/STOCK/AVAILABILITY stayed on SHOPITEM     -->
+  <!-- while a VARIANTS block is also present.                       -->
+  <!-- The schema allows EITHER sales data on the item (non-variant) -->
+  <!-- OR a VARIANTS block. Never both.                              -->
+  <!-- ============================================================= -->
+  <SHOPITEM>
+    <NAME>Tričko Basic (chyba A)</NAME>
+    <CODE>TRIKO-A</CODE>
+    <CURRENCY>CZK</CURRENCY>
+    <PRICE>299.00</PRICE>
+    <STOCK>
+      <AMOUNT>10</AMOUNT>
+    </STOCK>
+    <AVAILABILITY>Skladem</AVAILABILITY>
+    <VARIANTS>
+      <VARIANT>
+        <CODE>TRIKO-A-S</CODE>
+        <PRICE>299.00</PRICE>
+        <PARAMETERS>
+          <PARAMETER>
+            <NAME>Velikost</NAME>
+            <VALUE>S</VALUE>
+          </PARAMETER>
+        </PARAMETERS>
+      </VARIANT>
+    </VARIANTS>
+  </SHOPITEM>
+
+  <!-- ============================================================= -->
+  <!-- ITEM 2 — ERROR B: missing mandatory PARAMETERS in VARIANT.    -->
+  <!-- The variant parameter (size) sits by mistake in INFORMATION_  -->
+  <!-- PARAMETERS at item level; the VARIANT has no PARAMETERS.      -->
+  <!-- Inside VARIANT, PARAMETERS is mandatory (oneOrMore PARAMETER).-->
+  <!-- ============================================================= -->
+  <SHOPITEM>
+    <NAME>Tričko Basic (chyba B)</NAME>
+    <INFORMATION_PARAMETERS>
+      <INFORMATION_PARAMETER>
+        <NAME>Velikost</NAME>
+        <VALUE>S</VALUE>
+      </INFORMATION_PARAMETER>
+    </INFORMATION_PARAMETERS>
+    <VARIANTS>
+      <VARIANT>
+        <CODE>TRIKO-B-S</CODE>
+        <PRICE>299.00</PRICE>
+      </VARIANT>
+    </VARIANTS>
+  </SHOPITEM>
+
+  <!-- ============================================================= -->
+  <!-- ITEM 3 — ERROR C: double nesting VARIANTS > VARIANT >         -->
+  <!-- VARIANTS. A VARIANT must not contain another VARIANTS block.  -->
+  <!-- ============================================================= -->
+  <SHOPITEM>
+    <NAME>Tričko Basic (chyba C)</NAME>
+    <VARIANTS>
+      <VARIANT>
+        <CODE>TRIKO-C-S</CODE>
+        <PRICE>299.00</PRICE>
+        <PARAMETERS>
+          <PARAMETER>
+            <NAME>Velikost</NAME>
+            <VALUE>S</VALUE>
+          </PARAMETER>
+        </PARAMETERS>
+        <VARIANTS>
+          <VARIANT>
+            <CODE>TRIKO-C-S-2</CODE>
+            <PARAMETERS>
+              <PARAMETER>
+                <NAME>Barva</NAME>
+                <VALUE>modrá</VALUE>
+              </PARAMETER>
+            </PARAMETERS>
+          </VARIANT>
+        </VARIANTS>
+      </VARIANT>
+    </VARIANTS>
+  </SHOPITEM>
+
+  <!-- ============================================================= -->
+  <!-- ITEM 4 — ERROR D: VISIBILITY vs VISIBLE swap.                 -->
+  <!-- VISIBLE (0/1) sits by mistake at item level (belongs only in  -->
+  <!-- the variant) and VISIBILITY (visible/hidden) by mistake       -->
+  <!-- inside VARIANT (belongs only at item level).                  -->
+  <!-- ============================================================= -->
+  <SHOPITEM>
+    <NAME>Tričko Basic (chyba D)</NAME>
+    <VISIBLE>1</VISIBLE>
+    <VARIANTS>
+      <VARIANT>
+        <CODE>TRIKO-D-S</CODE>
+        <PRICE>299.00</PRICE>
+        <VISIBILITY>visible</VISIBILITY>
+        <PARAMETERS>
+          <PARAMETER>
+            <NAME>Velikost</NAME>
+            <VALUE>S</VALUE>
+          </PARAMETER>
+        </PARAMETERS>
+      </VARIANT>
+    </VARIANTS>
+  </SHOPITEM>
+
+</SHOP>

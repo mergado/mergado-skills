@@ -1,0 +1,528 @@
+<SHOP>
+  <!--  Products without variants  -->
+  <SHOPITEM>
+    <NAME>Boty Nike AirMax</NAME>
+    <APPENDIX>additional materials</APPENDIX>
+    <SHORT_DESCRIPTION>Stylové boty</SHORT_DESCRIPTION>
+    <DESCRIPTION>Stylové boty</DESCRIPTION>
+    <MANUFACTURER>Nike</MANUFACTURER>
+    <SUPPLIER>Dropshipping</SUPPLIER>
+    <WARRANTY>24</WARRANTY>
+    <ADULT>0</ADULT>
+    <ITEM_TYPE>product</ITEM_TYPE>
+    <UNIT>ks</UNIT>
+    <CODE>DS76065630</CODE>
+    <EAN>1310121350001</EAN>
+    <CATEGORIES>
+      <CATEGORY>Boty > Nike</CATEGORY>
+      <CATEGORY>Boty > Airmax</CATEGORY>
+    </CATEGORIES>
+    <IMAGES>
+      <IMAGE description="picture description">
+        http://www.test.com/obrazky/nike1.jpg
+      </IMAGE>
+      <IMAGE description="picture description)">
+        http://www.test.com/obrazky/nike2.jpg
+      </IMAGE>
+      <IMAGE description="picture description">
+        http://www.test.com/obrazky/nike3.jpg
+      </IMAGE>
+    </IMAGES>
+    <TEXT_PROPERTIES>
+      <TEXT_PROPERTY>
+        <NAME>Šití</NAME>
+        <VALUE>ruční</VALUE>
+        <DESCRIPTION />
+      </TEXT_PROPERTY>
+      <TEXT_PROPERTY>
+        <NAME>Podrážka</NAME>
+        <VALUE>gumová</VALUE>
+        <DESCRIPTION />
+      </TEXT_PROPERTY>
+      <TEXT_PROPERTY>
+        <NAME>Tkaničky</NAME>
+        <VALUE>kulaté</VALUE>
+        <DESCRIPTION />
+      </TEXT_PROPERTY>
+    </TEXT_PROPERTIES>
+    <INFORMATION_PARAMETERS>
+      <INFORMATION_PARAMETER>
+        <NAME>barva</NAME>
+        <VALUE>fialová</VALUE>
+      </INFORMATION_PARAMETER>
+    </INFORMATION_PARAMETERS>
+    <RELATED_PRODUCTS>
+      <CODE>NA-23</CODE>
+      <CODE>NA-29</CODE>
+      <CODE>NA-32</CODE>
+    </RELATED_PRODUCTS>
+    <ALTERNATIVE_PRODUCTS>
+      <CODE>NA-23</CODE>
+      <CODE>NA-29</CODE>
+      <CODE>NA-32</CODE>
+    </ALTERNATIVE_PRODUCTS>
+    <GIFTS>
+      <CODE>88</CODE>
+    </GIFTS>
+    <FREE_SHIPPING>0</FREE_SHIPPING>
+    <FREE_BILLING>0</FREE_BILLING>
+    <FLAGS>
+      <FLAG>
+        <CODE>new</CODE>
+        <ACTIVE>1</ACTIVE>
+      </FLAG>
+      <FLAG>
+        <CODE>new</CODE>
+        <ACTIVE>1</ACTIVE>
+      </FLAG>
+      <FLAG>
+        <CODE>action</CODE>
+        <ACTIVE>1</ACTIVE>
+      </FLAG>
+      <FLAG>
+        <CODE>tip</CODE>
+        <ACTIVE>1</ACTIVE>
+      </FLAG>
+      <FLAG>
+        <CODE>custom1</CODE>
+        <ACTIVE>0</ACTIVE>
+      </FLAG>
+      <FLAG>
+        <CODE>custom2</CODE>
+        <ACTIVE>0</ACTIVE>
+      </FLAG>
+      <FLAG>
+        <CODE>custom3</CODE>
+        <ACTIVE>0</ACTIVE>
+      </FLAG>
+    </FLAGS>
+    <VISIBILITY>visible</VISIBILITY>
+    <RELATED_FILES>
+      <RELATED_FILE>
+        <TEXT />
+        <URL />
+      </RELATED_FILE>
+    </RELATED_FILES>
+    <RELATED_VIDEOS>
+      <RELATED_VIDEO>
+        <TEXT />
+        <YOUTUBE_VIDEO_CODE />
+      </RELATED_VIDEO>
+    </RELATED_VIDEOS>
+    <XML_FEED_NAME>feed name</XML_FEED_NAME>
+    <SEO_TITLE>title</SEO_TITLE>
+    <META_KEYWORDS />
+    <META_DESCRIPTION>description</META_DESCRIPTION>
+    <ALLOWS_IPLATBA>1</ALLOWS_IPLATBA>
+    <SIZEID>
+      <ID />
+      <LABEL />
+    </SIZEID>
+    <DEPOSIT_CODE />
+    <DEPOSIT_LOGIC />
+    <HEUREKA_CATEGORY_ID />
+    <ZBOZI_CATEGORY_ID />
+    <GOOGLE_CATEGORY_ID />
+    <GLAMI_CATEGORY_ID />
+    <ALLOWS_PAYU>1</ALLOWS_PAYU>
+    <ALLOWS_PAY_ONLINE>1</ALLOWS_PAY_ONLINE>
+    <ATYPICAL_SHIPPING>0</ATYPICAL_SHIPPING>
+    <ATYPICAL_BILLING>0</ATYPICAL_BILLING>
+    <INTERNAL_NOTE />
+    <ITEM_CONDITION>
+      <GRADE>open_box</GRADE>
+      <DESCRIPTION />
+    </ITEM_CONDITION>
+    <STOCK>
+      <WAREHOUSES>
+        <WAREHOUSE>
+          <NAME>Praha</NAME>
+          <VALUE>-66</VALUE>
+          <LOCATION />
+        </WAREHOUSE>
+        <WAREHOUSE>
+          <NAME>Brno</NAME>
+          <VALUE>0</VALUE>
+          <LOCATION />
+        </WAREHOUSE>
+        <WAREHOUSE>
+          <NAME>Dozásobovací sklad</NAME>
+          <VALUE>0</VALUE>
+          <LOCATION />
+        </WAREHOUSE>
+        <WAREHOUSE>
+          <NAME>Dodavatelský sklad</NAME>
+          <VALUE>0</VALUE>
+          <LOCATION />
+        </WAREHOUSE>
+      </WAREHOUSES>
+      <MINIMAL_AMOUNT />
+      <MAXIMAL_AMOUNT />
+    </STOCK>
+    <AVAILABILITY>Skladem</AVAILABILITY>
+    <AVAILABILITY_OUT_OF_STOCK>Skladem</AVAILABILITY_OUT_OF_STOCK>
+    <AVAILABILITY_IN_STOCK>Momentálně nedostupné</AVAILABILITY_IN_STOCK>
+    <STOCK_MIN_SUPPLY />
+    <VISIBLE>1</VISIBLE>
+    <LOGISTIC>
+      <WEIGHT>0</WEIGHT>
+      <HEIGHT>10</HEIGHT>
+      <WIDTH>20</WIDTH>
+      <DEPTH>30</DEPTH>
+    </LOGISTIC>
+    <ATYPICAL_PRODUCT>
+      <ATYPICAL_SHIPPING>0</ATYPICAL_SHIPPING>
+      <ATYPICAL_BILLING>0</ATYPICAL_BILLING>
+    </ATYPICAL_PRODUCT>
+    <CURRENCY>CZK</CURRENCY>
+    <PRICE>2480.00</PRICE>
+    <STANDARD_PRICE>2500.00</STANDARD_PRICE>
+    <PURCHASE_PRICE>1980.00</PURCHASE_PRICE>
+    <DIMENSIONS>
+      <HEIGHT>10</HEIGHT>
+      <WIDTH>20</WIDTH>
+      <DEPTH>30</DEPTH>
+    </DIMENSIONS>
+    <EXTERNAL_CODE>10</EXTERNAL_CODE>
+    <PRODUCT_NUMBER>34567</PRODUCT_NUMBER>
+    <PART_NUMBER>567789</PART_NUMBER>
+    <SERIAL_NUMBER>2455</SERIAL_NUMBER>
+    <PLU>456</PLU>
+    <FIRMY_CZ>1</FIRMY_CZ>
+    <HEUREKA_HIDDEN>0</HEUREKA_HIDDEN>
+    <HEUREKA_CART_HIDDEN>0</HEUREKA_CART_HIDDEN>
+    <HEUREKA_CPC />
+    <ZBOZI_HIDDEN>0</ZBOZI_HIDDEN>
+    <ZBOZI_CPC />
+    <ZBOZI_SEARCH_CPC />
+    <ARUKERESO_HIDDEN>0</ARUKERESO_HIDDEN>
+    <ARUKERESO_MARKETPLACE_HIDDEN>0</ARUKERESO_MARKETPLACE_HIDDEN>
+    <DECIMAL_COUNT>0</DECIMAL_COUNT>
+    <NEGATIVE_AMOUNT>0</NEGATIVE_AMOUNT>
+    <UNIT_OF_MEASURE>
+      <PACKAGE_AMOUNT />
+      <PACKAGE_AMOUNT_UNIT />
+      <MEASURE_AMOUNT />
+      <MEASURE_AMOUNT_UNIT />
+    </UNIT_OF_MEASURE>
+    <PRICE_RATIO>1</PRICE_RATIO>
+    <MIN_PRICE_RATIO>0</MIN_PRICE_RATIO>
+    <ACTION_PRICE>200</ACTION_PRICE>
+    <ACTION_PRICE_FROM>2017-01-02</ACTION_PRICE_FROM>
+    <ACTION_PRICE_UNTIL>2017-01-18</ACTION_PRICE_UNTIL>
+    <APPLY_LOYALTY_DISCOUNT>0</APPLY_LOYALTY_DISCOUNT>
+    <APPLY_VOLUME_DISCOUNT>0</APPLY_VOLUME_DISCOUNT>
+    <APPLY_QUANTITY_DISCOUNT>0</APPLY_QUANTITY_DISCOUNT>
+    <APPLY_DISCOUNT_COUPON>0</APPLY_DISCOUNT_COUPON>
+    <PRICELISTS>
+      <PRICELIST>
+        <TITLE>Velkooběratel</TITLE>
+        <PURCHASE_PRICE />
+        <STANDARD_PRICE />
+        <PRICE_RATIO>1</PRICE_RATIO>
+        <MIN_PRICE_RATIO>0</MIN_PRICE_RATIO>
+        <ACTION_PRICE />
+        <APPLY_LOYALTY_DISCOUNT>0</APPLY_LOYALTY_DISCOUNT>
+        <APPLY_VOLUME_DISCOUNT>0</APPLY_VOLUME_DISCOUNT>
+        <APPLY_QUANTITY_DISCOUNT>0</APPLY_QUANTITY_DISCOUNT>
+        <APPLY_DISCOUNT_COUPON>0</APPLY_DISCOUNT_COUPON>
+        <FREE_SHIPPING>0</FREE_SHIPPING>
+        <FREE_BILLING>0</FREE_BILLING>
+        <MINIMAL_AMOUNT />
+        <MAXIMAL_AMOUNT />
+      </PRICELIST>
+    </PRICELISTS>
+    <OSS_TAX_RATES>
+      <OSS_TAX_RATE>
+        <TAX_COUNTRY>CZ</TAX_COUNTRY>
+        <TAX_RATE_LEVEL>high</TAX_RATE_LEVEL>
+      </OSS_TAX_RATE>
+      <OSS_TAX_RATE>
+        <TAX_COUNTRY>HU</TAX_COUNTRY>
+        <TAX_RATE_LEVEL>high</TAX_RATE_LEVEL>
+      </OSS_TAX_RATE>
+      <OSS_TAX_RATE>
+        <TAX_COUNTRY>PL</TAX_COUNTRY>
+        <TAX_RATE_LEVEL>high</TAX_RATE_LEVEL>
+      </OSS_TAX_RATE>
+      <OSS_TAX_RATE>
+        <TAX_COUNTRY>RO</TAX_COUNTRY>
+        <TAX_RATE_LEVEL>high</TAX_RATE_LEVEL>
+      </OSS_TAX_RATE>
+      <OSS_TAX_RATE>
+        <TAX_COUNTRY>SK</TAX_COUNTRY>
+        <TAX_RATE_LEVEL>high</TAX_RATE_LEVEL>
+      </OSS_TAX_RATE>
+    </OSS_TAX_RATES>
+  </SHOPITEM>
+
+  <SHOPITEM>
+    <!--  Products with variants  -->
+    <NAME>Boty Nike AirMax</NAME>
+    <APPENDIX>additional materials</APPENDIX>
+    <SHORT_DESCRIPTION>Stylové boty</SHORT_DESCRIPTION>
+    <DESCRIPTION>Stylové boty</DESCRIPTION>
+    <MANUFACTURER>Nike</MANUFACTURER>
+    <SUPPLIER>Dropshipping</SUPPLIER>
+    <WARRANTY>24</WARRANTY>
+    <ADULT>0</ADULT>
+    <ITEM_TYPE>product</ITEM_TYPE>
+    <UNIT>ks</UNIT>
+    <CATEGORIES>
+      <CATEGORY>Boty > Nike</CATEGORY>
+      <CATEGORY>Boty > Airmax</CATEGORY>
+    </CATEGORIES>
+    <IMAGES>
+      <IMAGE description="picture description">
+        http://www.test.com/obrazky/nike1.jpg
+      </IMAGE>
+      <IMAGE description="picture description">
+        http://www.test.com/obrazky/nike2.jpg
+      </IMAGE>
+      <IMAGE description="picture description">
+        http://www.test.com/obrazky/nike3.jpg
+      </IMAGE>
+    </IMAGES>
+    <TEXT_PROPERTIES>
+      <TEXT_PROPERTY>
+        <NAME>Šití</NAME>
+        <VALUE>ruční</VALUE>
+        <DESCRIPTION />
+      </TEXT_PROPERTY>
+      <TEXT_PROPERTY>
+        <NAME>Podrážka</NAME>
+        <VALUE>gumová</VALUE>
+        <DESCRIPTION />
+      </TEXT_PROPERTY>
+      <TEXT_PROPERTY>
+        <NAME>Tkaničky</NAME>
+        <VALUE>kulaté</VALUE>
+        <DESCRIPTION />
+      </TEXT_PROPERTY>
+    </TEXT_PROPERTIES>
+    <INFORMATION_PARAMETERS>
+      <INFORMATION_PARAMETER>
+        <NAME>barva</NAME>
+        <VALUE>fialová</VALUE>
+      </INFORMATION_PARAMETER>
+    </INFORMATION_PARAMETERS>
+    <RELATED_PRODUCTS>
+      <CODE>NA-23</CODE>
+      <CODE>NA-29</CODE>
+      <CODE>NA-32</CODE>
+    </RELATED_PRODUCTS>
+    <ALTERNATIVE_PRODUCTS>
+      <CODE>NA-23</CODE>
+      <CODE>NA-29</CODE>
+      <CODE>NA-32</CODE>
+    </ALTERNATIVE_PRODUCTS>
+    <GIFTS>
+      <CODE>88</CODE>
+    </GIFTS>
+    <FREE_SHIPPING>0</FREE_SHIPPING>
+    <FREE_BILLING>0</FREE_BILLING>
+    <FLAGS>
+      <FLAG>
+        <CODE>new</CODE>
+        <ACTIVE>1</ACTIVE>
+      </FLAG>
+      <FLAG>
+        <CODE>new</CODE>
+        <ACTIVE>1</ACTIVE>
+      </FLAG>
+      <FLAG>
+        <CODE>action</CODE>
+        <ACTIVE>1</ACTIVE>
+      </FLAG>
+      <FLAG>
+        <CODE>tip</CODE>
+        <ACTIVE>1</ACTIVE>
+      </FLAG>
+      <FLAG>
+        <CODE>custom1</CODE>
+        <ACTIVE>0</ACTIVE>
+      </FLAG>
+      <FLAG>
+        <CODE>custom2</CODE>
+        <ACTIVE>0</ACTIVE>
+      </FLAG>
+      <FLAG>
+        <CODE>custom3</CODE>
+        <ACTIVE>0</ACTIVE>
+      </FLAG>
+    </FLAGS>
+    <HEUREKA_CATEGORY_ID />
+    <ZBOZI_CATEGORY_ID />
+    <GOOGLE_CATEGORY_ID />
+    <GLAMI_CATEGORY_ID />
+    <VISIBILITY>visible</VISIBILITY>
+    <RELATED_FILES>
+      <RELATED_FILE>
+        <TEXT />
+        <URL />
+      </RELATED_FILE>
+    </RELATED_FILES>
+    <RELATED_VIDEOS>
+      <RELATED_VIDEO>
+        <TEXT />
+        <YOUTUBE_VIDEO_CODE />
+      </RELATED_VIDEO>
+    </RELATED_VIDEOS>
+    <XML_FEED_NAME>feed name</XML_FEED_NAME>
+    <SEO_TITLE>title</SEO_TITLE>
+    <META_KEYWORDS />
+    <META_DESCRIPTION>description</META_DESCRIPTION>
+    <ALLOWS_IPLATBA>1</ALLOWS_IPLATBA>
+    <SIZEID>
+      <ID />
+      <LABEL />
+    </SIZEID>
+    <DEPOSIT_CODE />
+    <DEPOSIT_LOGIC />
+    <ALLOWS_PAYU>1</ALLOWS_PAYU>
+    <ALLOWS_PAY_ONLINE>1</ALLOWS_PAY_ONLINE>
+    <ATYPICAL_SHIPPING>0</ATYPICAL_SHIPPING>
+    <ATYPICAL_BILLING>0</ATYPICAL_BILLING>
+    <INTERNAL_NOTE />
+    <ITEM_CONDITION>
+      <GRADE>open_box</GRADE>
+      <DESCRIPTION />
+    </ITEM_CONDITION>
+    <VARIANTS>
+      <VARIANT>
+        <CODE>DS76065630</CODE>
+        <EAN>1310121350001</EAN>
+        <CURRENCY>CZK</CURRENCY>
+        <PRICE>2480.00</PRICE>
+        <STANDARD_PRICE>2500.00</STANDARD_PRICE>
+        <PURCHASE_PRICE>1980.00</PURCHASE_PRICE>
+        <STOCK>
+          <WAREHOUSES>
+            <WAREHOUSE>
+              <NAME>Praha</NAME>
+              <VALUE>-66</VALUE>
+              <LOCATION />
+            </WAREHOUSE>
+            <WAREHOUSE>
+              <NAME>Brno</NAME>
+              <VALUE>0</VALUE>
+              <LOCATION />
+            </WAREHOUSE>
+            <WAREHOUSE>
+              <NAME>Dozásobovací sklad</NAME>
+              <VALUE>0</VALUE>
+              <LOCATION />
+            </WAREHOUSE>
+            <WAREHOUSE>
+              <NAME>Dodavatelský sklad</NAME>
+              <VALUE>0</VALUE>
+              <LOCATION />
+            </WAREHOUSE>
+          </WAREHOUSES>
+          <MINIMAL_AMOUNT />
+          <MAXIMAL_AMOUNT />
+        </STOCK>
+        <AVAILABILITY>Skladem</AVAILABILITY>
+        <AVAILABILITY_OUT_OF_STOCK>Skladem</AVAILABILITY_OUT_OF_STOCK>
+        <AVAILABILITY_IN_STOCK>Momentálně nedostupné</AVAILABILITY_IN_STOCK>
+        <STOCK_MIN_SUPPLY />
+        <VISIBLE>1</VISIBLE>
+        <LOGISTIC>
+          <WEIGHT>0</WEIGHT>
+          <HEIGHT>10</HEIGHT>
+          <WIDTH>20</WIDTH>
+          <DEPTH>30</DEPTH>
+        </LOGISTIC>
+        <ATYPICAL_PRODUCT>
+          <ATYPICAL_SHIPPING>0</ATYPICAL_SHIPPING>
+          <ATYPICAL_BILLING>0</ATYPICAL_BILLING>
+        </ATYPICAL_PRODUCT>
+        <FREE_SHIPPING>0</FREE_SHIPPING>
+        <FREE_BILLING>0</FREE_BILLING>
+        <UNIT>ks</UNIT>
+        <DIMENSIONS>
+          <HEIGHT>10</HEIGHT>
+          <WIDTH>20</WIDTH>
+          <DEPTH>30</DEPTH>
+        </DIMENSIONS>
+        <EXTERNAL_CODE>10</EXTERNAL_CODE>
+        <PRODUCT_NUMBER>34567</PRODUCT_NUMBER>
+        <PART_NUMBER>567789</PART_NUMBER>
+        <SERIAL_NUMBER>2455</SERIAL_NUMBER>
+        <PLU>456</PLU>
+        <FIRMY_CZ>1</FIRMY_CZ>
+        <HEUREKA_HIDDEN>0</HEUREKA_HIDDEN>
+        <HEUREKA_CART_HIDDEN>0</HEUREKA_CART_HIDDEN>
+        <HEUREKA_CPC />
+        <ZBOZI_HIDDEN>0</ZBOZI_HIDDEN>
+        <ZBOZI_CPC />
+        <ZBOZI_SEARCH_CPC />
+        <ARUKERESO_HIDDEN>0</ARUKERESO_HIDDEN>
+        <ARUKERESO_MARKETPLACE_HIDDEN>0</ARUKERESO_MARKETPLACE_HIDDEN>
+        <DECIMAL_COUNT>0</DECIMAL_COUNT>
+        <NEGATIVE_AMOUNT>0</NEGATIVE_AMOUNT>
+        <UNIT_OF_MEASURE>
+          <PACKAGE_AMOUNT />
+          <PACKAGE_AMOUNT_UNIT />
+          <MEASURE_AMOUNT />
+          <MEASURE_AMOUNT_UNIT />
+        </UNIT_OF_MEASURE>
+        <PRICE_RATIO>1</PRICE_RATIO>
+        <MIN_PRICE_RATIO>0</MIN_PRICE_RATIO>
+        <ACTION_PRICE>200</ACTION_PRICE>
+        <ACTION_PRICE_FROM>2017-01-02</ACTION_PRICE_FROM>
+        <ACTION_PRICE_UNTIL>2017-01-18</ACTION_PRICE_UNTIL>
+        <APPLY_LOYALTY_DISCOUNT>0</APPLY_LOYALTY_DISCOUNT>
+        <APPLY_VOLUME_DISCOUNT>0</APPLY_VOLUME_DISCOUNT>
+        <APPLY_QUANTITY_DISCOUNT>0</APPLY_QUANTITY_DISCOUNT>
+        <APPLY_DISCOUNT_COUPON>0</APPLY_DISCOUNT_COUPON>
+        <PRICELISTS>
+          <PRICELIST>
+            <TITLE>Velkooběratel</TITLE>
+            <PURCHASE_PRICE />
+            <STANDARD_PRICE />
+            <PRICE_RATIO>1</PRICE_RATIO>
+            <MIN_PRICE_RATIO>0</MIN_PRICE_RATIO>
+            <ACTION_PRICE />
+            <APPLY_LOYALTY_DISCOUNT>0</APPLY_LOYALTY_DISCOUNT>
+            <APPLY_VOLUME_DISCOUNT>0</APPLY_VOLUME_DISCOUNT>
+            <APPLY_QUANTITY_DISCOUNT>0</APPLY_QUANTITY_DISCOUNT>
+            <APPLY_DISCOUNT_COUPON>0</APPLY_DISCOUNT_COUPON>
+            <FREE_SHIPPING>0</FREE_SHIPPING>
+            <FREE_BILLING>0</FREE_BILLING>
+            <MINIMAL_AMOUNT />
+            <MAXIMAL_AMOUNT />
+          </PRICELIST>
+        </PRICELISTS>
+        <OSS_TAX_RATES>
+          <OSS_TAX_RATE>
+            <TAX_COUNTRY>CZ</TAX_COUNTRY>
+            <TAX_RATE_LEVEL>high</TAX_RATE_LEVEL>
+          </OSS_TAX_RATE>
+          <OSS_TAX_RATE>
+            <TAX_COUNTRY>HU</TAX_COUNTRY>
+            <TAX_RATE_LEVEL>high</TAX_RATE_LEVEL>
+          </OSS_TAX_RATE>
+          <OSS_TAX_RATE>
+            <TAX_COUNTRY>PL</TAX_COUNTRY>
+            <TAX_RATE_LEVEL>high</TAX_RATE_LEVEL>
+          </OSS_TAX_RATE>
+          <OSS_TAX_RATE>
+            <TAX_COUNTRY>RO</TAX_COUNTRY>
+            <TAX_RATE_LEVEL>high</TAX_RATE_LEVEL>
+          </OSS_TAX_RATE>
+          <OSS_TAX_RATE>
+            <TAX_COUNTRY>SK</TAX_COUNTRY>
+            <TAX_RATE_LEVEL>high</TAX_RATE_LEVEL>
+          </OSS_TAX_RATE>
+        </OSS_TAX_RATES>
+        <PARAMETERS>
+          <PARAMETER>
+            <NAME>Barva</NAME>
+            <VALUE>červená</VALUE>
+          </PARAMETER>
+        </PARAMETERS>
+      </VARIANT>
+    </VARIANTS>
+  </SHOPITEM>
+</SHOP>

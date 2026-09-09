@@ -1,0 +1,547 @@
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+    <include href="products-datatype-v10.rng" />
+
+    <start>
+        <element name="SHOP">
+            <oneOrMore>
+                <element name="SHOPITEM">
+                    <optional>
+                        <attribute name="id" />
+                    </optional>
+                    <optional>
+                        <attribute name="import-code" />
+                    </optional>
+                    <interleave>
+                        <!-- optionally base product description... -->
+                        <optional>
+                            <element name="EXTERNAL_ID">
+                                <ref name="codeDatatype" />
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="NAME">
+                                <ref name="nameDatatype" />
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="APPENDIX">
+                                <ref name="nameAppendix" />
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="SHORT_DESCRIPTION">
+                                <data type="string" />
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="DESCRIPTION">
+                                <data type="string" />
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="MANUFACTURER">
+                                <ref name="manufacturerDatatype" />
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="SUPPLIER">
+                                <ref name="supplierDatatype" />
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="WARRANTY">
+                                <ref name="warrantyDatatype" />
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="ADULT">
+                                <data type="boolean" />
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="ITEM_TYPE">
+                                <ref name="itemTypeDatatype" />
+                            </element>
+                        </optional>
+                        <optional>
+                            <!-- default 'unit' property for all variants -->
+                            <element name="UNIT">
+                                <ref name="unitDatatype" />
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="CATEGORIES">
+                                <zeroOrMore>
+                                    <element name="CATEGORY">
+                                        <optional>
+                                            <attribute name="id" />
+                                        </optional>
+                                        <data type="string">
+                                            <param name="minLength">1</param>
+                                            <param name="maxLength">255</param>
+                                        </data>
+                                    </element>
+                                </zeroOrMore>
+                                <optional>
+                                    <element name="DEFAULT_CATEGORY">
+                                        <optional>
+                                            <attribute name="id" />
+                                        </optional>
+                                        <optional>
+                                            <attribute name="google-id" />
+                                        </optional>
+                                        <data type="string">
+                                            <param name="minLength">1</param>
+                                            <param name="maxLength">255</param>
+                                        </data>
+                                    </element>
+                                </optional>
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="IMAGES">
+                                <zeroOrMore>
+                                    <element name="IMAGE">
+                                        <optional>
+                                            <attribute name="description" />
+                                        </optional>
+                                        <data type="string" />
+                                    </element>
+                                </zeroOrMore>
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="TEXT_PROPERTIES">
+                                <zeroOrMore>
+                                    <element name="TEXT_PROPERTY">
+                                        <interleave>
+                                            <element name="NAME">
+                                                <ref name="nameDatatype" />
+                                            </element>
+                                            <element name="VALUE">
+                                                <data type="string" />
+                                            </element>
+                                            <optional>
+                                                <element name="DESCRIPTION">
+                                                    <data type="string" />
+                                                </element>
+                                            </optional>
+                                        </interleave>
+                                    </element>
+                                </zeroOrMore>
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="INFORMATION_PARAMETERS">
+                                <zeroOrMore>
+                                    <element name="INFORMATION_PARAMETER">
+                                        <interleave>
+                                            <element name="NAME">
+                                                <ref name="nameDatatype" />
+                                            </element>
+                                            <oneOrMore>
+                                                <element name="VALUE">
+                                                    <data type="string" />
+                                                </element>
+                                            </oneOrMore>
+                                        </interleave>
+                                    </element>
+                                </zeroOrMore>
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="SURCHARGE_PARAMETERS">
+                                <zeroOrMore>
+                                    <element name="SURCHARGE_PARAMETER">
+                                        <interleave>
+                                            <element name="NAME">
+                                                <ref name="nameDatatype" />
+                                            </element>
+                                            <optional>
+                                                <element name="DESCRIPTION">
+                                                    <data type="string" />
+                                                </element>
+                                                <element name="SHORT_NAME">
+                                                    <data type="string" />
+                                                </element>
+                                                <element name="CURRENCY">
+                                                    <ref name="currencyDatatype" />
+                                                </element>
+                                                <element name="INCLUDING_VAT">
+                                                    <data type="boolean" />
+                                                </element>
+                                            </optional>
+                                            <element name="REQUIRED_VALUE">
+                                                <data type="boolean" />
+                                            </element>
+                                            <element name="VALUES">
+                                                <oneOrMore>
+                                                    <element name="VALUE">
+                                                        <interleave>
+                                                            <element name="NAME">
+                                                                <ref name="nameDatatype" />
+                                                            </element>
+                                                            <element name="PRICE">
+                                                                <ref name="priceDatatype" />
+                                                            </element>
+                                                        </interleave>
+                                                    </element>
+                                                </oneOrMore>
+                                            </element>
+                                        </interleave>
+                                    </element>
+                                </zeroOrMore>
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="RELATED_PRODUCTS">
+                                <zeroOrMore>
+                                    <element name="CODE">
+                                        <ref name="codeDatatype" />
+                                    </element>
+                                </zeroOrMore>
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="ALTERNATIVE_PRODUCTS">
+                                <zeroOrMore>
+                                    <element name="CODE">
+                                        <ref name="codeDatatype" />
+                                    </element>
+                                </zeroOrMore>
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="GIFTS">
+                                <zeroOrMore>
+                                    <element name="CODE">
+                                        <ref name="codeDatatype" />
+                                    </element>
+                                </zeroOrMore>
+                            </element>
+                        </optional>
+                        <optional>
+                            <!-- default 'free shiping' property for all variants -->
+                            <element name="FREE_SHIPPING">
+                                <data type="boolean" />
+                            </element>
+                        </optional>
+                        <optional>
+                            <!-- default 'free billing' property for all variants -->
+                            <element name="FREE_BILLING">
+                                <data type="boolean" />
+                            </element>
+                        </optional>
+
+                        <choice>
+                            <optional>
+                                <element name="FLAGS">
+                                    <oneOrMore>
+                                        <element name="FLAG">
+                                            <interleave>
+                                                <element name="CODE">
+                                                    <data type="string"/>
+                                                </element>
+                                                <choice>
+                                                    <group>
+                                                        <element name="ACTIVE">
+                                                            <data type="boolean" />
+                                                        </element>
+                                                    </group>
+                                                    <group>
+                                                        <element name="VALID_FROM">
+                                                            <data type="date" />
+                                                        </element>
+                                                    </group>
+                                                    <group>
+                                                        <element name="VALID_UNTIL">
+                                                            <data type="date" />
+                                                        </element>
+                                                    </group>
+                                                    <group>
+                                                        <interleave>
+                                                            <element name="VALID_FROM">
+                                                                <data type="date" />
+                                                            </element>
+                                                            <element name="VALID_UNTIL">
+                                                                <data type="date" />
+                                                            </element>
+                                                        </interleave>
+                                                    </group>
+                                                </choice>
+                                            </interleave>
+                                        </element>
+                                    </oneOrMore>
+                                </element>
+                            </optional>
+
+                            <optional>
+                                <element name="FLAGS">
+                                    <interleave>
+                                        <optional>
+                                            <element name="NEW">
+                                                <data type="boolean" />
+                                            </element>
+                                        </optional>
+                                        <optional>
+                                            <element name="TIP">
+                                                <data type="boolean" />
+                                            </element>
+                                        </optional>
+                                        <optional>
+                                            <element name="ACTION">
+                                                <data type="boolean" />
+                                            </element>
+                                        </optional>
+                                        <optional>
+                                            <element name="CUSTOM1">
+                                                <data type="boolean" />
+                                            </element>
+                                        </optional>
+                                        <optional>
+                                            <element name="CUSTOM2">
+                                                <data type="boolean" />
+                                            </element>
+                                        </optional>
+                                        <optional>
+                                            <element name="CUSTOM3">
+                                                <data type="boolean" />
+                                            </element>
+                                        </optional>
+                                    </interleave>
+                                </element>
+                            </optional>
+                        </choice>
+
+                        <!-- empty placeholder -->
+                        <ref name="optionalShopitemExtendedProductElementGroup" />
+
+                        <!-- end optionally base product description... -->
+
+                        <choice>
+                            <!-- choose this for single product variant... -->
+                            <ref name="shopitemDetailElementGroup" />
+                            <!-- ...or this for multiple product variants -->
+                            <element name="VARIANTS">
+                                <oneOrMore>
+                                    <element name="VARIANT">
+                                        <optional>
+                                            <attribute name="id" />
+                                        </optional>
+                                        <interleave>
+                                            <!-- all 'shopItemDetailElementGroup' elements have to stay together in 'VARIANT' element -->
+                                            <ref name="shopitemDetailElementGroup" />
+                                            <element name="PARAMETERS">
+                                                <oneOrMore>
+                                                    <element name="PARAMETER">
+                                                        <element name="NAME">
+                                                            <ref name="nameDatatype" />
+                                                        </element>
+                                                        <element name="VALUE">
+                                                            <ref name="variantValueDatatype" />
+                                                        </element>
+                                                    </element>
+                                                </oneOrMore>
+                                            </element>
+                                            <optional>
+                                                <!-- optional overwriting default 'free shiping' property -->
+                                                <element name="FREE_SHIPPING">
+                                                    <data type="boolean" />
+                                                </element>
+                                            </optional>
+                                            <optional>
+                                                <!-- optional overwriting default 'free billing' property -->
+                                                <element name="FREE_BILLING">
+                                                    <data type="boolean" />
+                                                </element>
+                                            </optional>
+                                            <optional>
+                                                <!-- optional overwriting default  'unit' property -->
+                                                <element name="UNIT">
+                                                    <ref name="unitDatatype" />
+                                                </element>
+                                            </optional>
+                                        </interleave>
+                                    </element>
+                                </oneOrMore>
+                            </element>
+                        </choice>
+                    </interleave>
+                </element>
+            </oneOrMore>
+        </element>
+    </start>
+
+
+    <define name="shopitemDetailElementGroup">
+        <interleave>
+            <!-- we need only one mandatory element <CODE> or <EAN>  -->
+            <choice>
+                <group>
+                    <element name="CODE">
+                        <ref name="codeDatatype" />
+                    </element>
+                    <optional>
+                        <element name="EAN">
+                            <ref name="eanDatatype" />
+                        </element>
+                    </optional>
+                </group>
+                <group>
+                    <element name="EAN">
+                        <ref name="eanDatatype" />
+                    </element>
+                    <optional>
+                        <element name="CODE">
+                            <ref name="codeDatatype" />
+                        </element>
+                    </optional>
+                </group>
+            </choice>
+            <!-- next group elements are optionaly  -->
+            <optional>
+                <element name="VAT">
+                    <ref name="vatDatatype" />
+                </element>
+            </optional>
+            <optional>
+                <element name="PRICE">
+                    <ref name="priceDatatype" />
+                </element>
+            </optional>
+            <optional>
+                <element name="PURCHASE_PRICE">
+                    <choice>
+                        <ref name="priceDatatype" />
+                        <empty />
+                    </choice>
+                </element>
+            </optional>
+            <optional>
+                <element name="STANDARD_PRICE">
+                    <choice>
+                        <ref name="priceDatatype" />
+                        <empty />
+                    </choice>
+                </element>
+            </optional>
+            <optional>
+                <element name="PRICE_VAT">
+                    <ref name="priceDatatype" />
+                </element>
+            </optional>
+            <optional>
+                <element name="STOCK">
+                    <interleave>
+                        <optional>
+                            <choice>
+                                <interleave>
+                                    <optional>
+                                        <element name="AMOUNT">
+                                            <ref name="amountDatatype"/>
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="LOCATION">
+                                            <data type="string">
+                                                <param name="maxLength">255</param>
+                                            </data>
+                                        </element>
+                                    </optional>
+                                </interleave>
+                                <element name="WAREHOUSES">
+                                    <oneOrMore>
+                                        <element name="WAREHOUSE">
+                                            <interleave>
+                                                <optional>
+                                                    <element name="NAME">
+                                                        <ref name="nameDatatype"/>
+                                                    </element>
+                                                </optional>
+                                                <optional>
+                                                    <element name="VALUE">
+                                                        <ref name="amountDatatype"/>
+                                                    </element>
+                                                </optional>
+                                                <optional>
+                                                    <element name="LOCATION">
+                                                        <data type="string">
+                                                            <param name="maxLength">255</param>
+                                                        </data>
+                                                    </element>
+                                                </optional>
+                                            </interleave>
+                                        </element>
+                                    </oneOrMore>
+                                </element>
+                            </choice>
+                        </optional>
+
+                        <optional>
+                            <element name="MINIMAL_AMOUNT">
+                                <choice>
+                                    <ref name="amountDatatype" />
+                                    <empty />
+                                </choice>
+                            </element>
+                        </optional>
+                        <optional>
+                            <element name="MAXIMAL_AMOUNT">
+                                <choice>
+                                    <ref name="amountDatatype" />
+                                    <empty />
+                                </choice>
+                            </element>
+                        </optional>
+                    </interleave>
+                </element>
+            </optional>
+            <optional>
+                <element name="CURRENCY">
+                    <ref name="currencyDatatype" />
+                </element>
+            </optional>
+            <optional>
+                <!-- AVAILABILITY tag is deprecated, instead of this use AVAILABILITY_OUT_OF_STOCK and AVAILABILITY_IN_STOCK -->
+                <element name="AVAILABILITY">
+                    <ref name="availabilityDatatype" />
+                </element>
+            </optional>
+            <optional>
+                <element name="AVAILABILITY_OUT_OF_STOCK">
+                    <ref name="availabilityDatatype" />
+                </element>
+            </optional>
+            <optional>
+                <element name="AVAILABILITY_IN_STOCK">
+                    <ref name="availabilityDatatype" />
+                </element>
+            </optional>
+            <optional>
+                <element name="IMAGE_REF">
+                    <data type="string" />
+                </element>
+            </optional>
+
+            <!-- empty placeholder -->
+            <ref name="optionalShopitemExtendedDetailElementGroup" />
+
+        </interleave>
+    </define>
+
+    <define name="optionalShopitemExtendedProductElementGroup">
+        <optional>
+            <element name="HS_CODE">
+                <data type="string" />
+            </element>
+        </optional>
+    </define>
+
+    <!-- define empty group as placeholder place  -->
+    <define name="optionalShopitemExtendedDetailElementGroup">
+        <empty />
+    </define>
+
+</grammar>

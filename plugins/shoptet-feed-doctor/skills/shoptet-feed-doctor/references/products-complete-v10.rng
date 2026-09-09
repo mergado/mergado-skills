@@ -1,0 +1,826 @@
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+    <include href="products-supplier-v10.rng">
+        <define name="optionalShopitemExtendedProductElementGroup">
+            <interleave>
+                <optional>
+                    <element name="GUID">
+                        <data type="token">
+                            <param name="pattern">([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})|([0-9a-f]{32})</param>
+                        </data>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="FLAG_VALIDITY">
+                        <interleave>
+                            <optional>
+                                <element name="NEW">
+                                    <data type="date" />
+                                </element>
+                            </optional>
+                            <optional>
+                                <element name="TIP">
+                                    <data type="date" />
+                                </element>
+                            </optional>
+                            <optional>
+                                <element name="ACTION">
+                                    <data type="date" />
+                                </element>
+                            </optional>
+                            <optional>
+                                <element name="CUSTOM1">
+                                    <data type="date" />
+                                </element>
+                            </optional>
+                            <optional>
+                                <element name="CUSTOM2">
+                                    <data type="date" />
+                                </element>
+                            </optional>
+                            <optional>
+                                <element name="CUSTOM3">
+                                    <data type="date" />
+                                </element>
+                            </optional>
+                        </interleave>
+                    </element>
+                </optional>
+                <zeroOrMore>
+                    <element name="ORIG_URL">
+                        <data type="string" />
+                    </element>
+                </zeroOrMore>
+                <optional>
+                    <element name="VISIBILITY">
+                        <choice>
+                            <value type="string">hidden</value>
+                            <value type="string">visible</value>
+                            <value type="string">blocked</value>
+                            <value type="string">showRegistered</value>
+                            <value type="string">blockUnregistered</value>
+                            <value type="string">detailOnly</value>
+                            <value type="string">cashDeskOnly</value>
+                        </choice>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="RELATED_FILES">
+                        <zeroOrMore>
+                            <element name="RELATED_FILE">
+                                <interleave>
+                                    <optional>
+                                        <element name="TEXT">
+                                            <data type="string">
+                                                <param name="maxLength">128</param>
+                                            </data>
+                                        </element>
+                                    </optional>
+                                    <element name="URL">
+                                        <data type="string">
+                                            <param name="maxLength">2000</param>
+                                        </data>
+                                    </element>
+                                </interleave>
+                            </element>
+                        </zeroOrMore>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="RELATED_VIDEOS">
+                        <zeroOrMore>
+                            <element name="RELATED_VIDEO">
+                                <interleave>
+                                    <optional>
+                                        <element name="TEXT">
+                                            <data type="string">
+                                                <param name="maxLength">128</param>
+                                            </data>
+                                        </element>
+                                    </optional>
+                                    <element name="YOUTUBE_VIDEO_CODE">
+                                        <data type="string">
+                                            <param name="maxLength">32</param>
+                                        </data>
+                                    </element>
+                                </interleave>
+                            </element>
+                        </zeroOrMore>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="XML_FEED_NAME">
+                        <data type="string">
+                            <param name="minLength">1</param>
+                            <param name="maxLength">255</param>
+                        </data>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="SEO_TITLE">
+                        <data type="string">
+                            <param name="maxLength">255</param>
+                        </data>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="META_KEYWORDS">
+                        <data type="string" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="META_DESCRIPTION">
+                        <data type="string" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="ALLOWS_IPLATBA">
+                        <data type="boolean" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="SIZEID">
+                        <interleave>
+                            <element name="ID">
+                                <choice>
+                                    <data type="integer" />
+                                    <empty />
+                                </choice>
+                            </element>
+                            <element name="LABEL">
+                                <data type="string">
+                                    <param name="minLength">0</param>
+                                    <param name="maxLength">255</param>
+                                </data>
+                            </element>
+                        </interleave>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="DEPOSIT_CODE">
+                        <data type="string" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="DEPOSIT_LOGIC">
+                        <data type="string" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="SET_ITEMS">
+                        <zeroOrMore>
+                            <element name="SET_ITEM">
+                                <interleave>
+                                    <element name="CODE">
+                                        <ref name="codeDatatype" />
+                                    </element>
+                                    <element name="AMOUNT">
+                                        <ref name="setItemAmountDatatype" />
+                                    </element>
+                                </interleave>
+                            </element>
+                        </zeroOrMore>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="HEUREKA_CATEGORY_ID">
+                        <choice>
+                            <data type="integer" />
+                            <empty />
+                        </choice>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="ZBOZI_CATEGORY_ID">
+                        <choice>
+                            <data type="integer" />
+                            <empty />
+                        </choice>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="GOOGLE_CATEGORY_ID">
+                        <choice>
+                            <data type="integer" />
+                            <empty />
+                        </choice>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="GLAMI_CATEGORY_ID">
+                        <choice>
+                            <data type="integer" />
+                            <empty />
+                        </choice>
+                    </element>
+                </optional>
+                <!-- left for backward import compatibility -->
+                <optional>
+                    <element name="ALLOWS_PAYU">
+                        <data type="boolean" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="ALLOWS_PAY_ONLINE">
+                        <data type="boolean" />
+                    </element>
+                </optional>
+                <interleave>
+                    <optional>
+                        <element name="ATYPICAL_SHIPPING">
+                            <data type="boolean" />
+                        </element>
+                    </optional>
+                    <optional>
+                        <element name="ATYPICAL_BILLING">
+                            <data type="boolean" />
+                        </element>
+                    </optional>
+                </interleave>
+                <optional>
+                    <element name="INTERNAL_NOTE">
+                        <data type="string" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="HS_CODE">
+                        <data type="string" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="ITEM_CONDITION">
+                        <interleave>
+                            <element name="GRADE">
+                                <ref name="productConditionGradeDatatype" />
+                            </element>
+                            <element name="DESCRIPTION">
+                                <data type="string" />
+                            </element>
+                        </interleave>
+                    </element>
+                </optional>
+            </interleave>
+        </define>
+
+        <define name="optionalShopitemExtendedDetailElementGroup">
+            <interleave>
+                <optional>
+                    <element name="STOCK_MIN_SUPPLY">
+                        <choice>
+                            <ref name="amountDatatype" />
+                            <empty />
+                        </choice>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="VISIBLE">
+                        <data type="boolean" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="LOGISTIC">
+                        <interleave>
+                            <optional>
+                                <element name="WIDTH">
+                                    <data type="float" />
+                                </element>
+                            </optional>
+                            <optional>
+                                <element name="HEIGHT">
+                                    <data type="float" />
+                                </element>
+                            </optional>
+                            <optional>
+                                <element name="DEPTH" >
+                                    <data type="float" />
+                                </element>
+                            </optional>
+                            <optional>
+                                <element name="WEIGHT">
+                                    <data type="float" />
+                                </element>
+                            </optional>
+                            <optional>
+                                <element name="RECOMMENDED_PACKAGING">
+                                    <data type="string" />
+                                </element>
+                            </optional>
+                            <optional>
+                                <element name="BOX_RESTRICTION">
+                                    <data type="boolean" />
+                                </element>
+                            </optional>
+                        </interleave>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="ATYPICAL_PRODUCT">
+                        <interleave>
+                            <optional>
+                                <element name="ATYPICAL_SHIPPING">
+                                    <data type="boolean" />
+                                </element>
+                            </optional>
+                            <optional>
+                                <element name="ATYPICAL_BILLING">
+                                    <data type="boolean" />
+                                </element>
+                            </optional>
+                        </interleave>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="DIMENSIONS">
+                        <interleave>
+                            <optional>
+                                <element name="WIDTH">
+                                    <data type="float" />
+                                </element>
+                            </optional>
+                            <optional>
+                                <element name="HEIGHT">
+                                    <data type="float" />
+                                </element>
+                            </optional>
+                            <optional>
+                                <element name="DEPTH">
+                                    <data type="float" />
+                                </element>
+                            </optional>
+                        </interleave>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="EXTERNAL_CODE">
+                        <data type="string">
+                            <param name="maxLength">32</param>
+                        </data>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="PRODUCT_NUMBER">
+                        <data type="string">
+                            <param name="maxLength">32</param>
+                        </data>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="PART_NUMBER">
+                        <data type="string">
+                            <param name="maxLength">32</param>
+                        </data>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="SERIAL_NUMBER">
+                        <data type="string">
+                            <param name="maxLength">32</param>
+                        </data>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="PLU">
+                        <data type="string">
+                            <param name="maxLength">16</param>
+                        </data>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="TOLL_FREE">
+                        <data type="boolean" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="FIRMY_CZ">
+                        <data type="boolean" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="HEUREKA_HIDDEN">
+                        <data type="boolean" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="HEUREKA_CART_HIDDEN">
+                        <data type="boolean" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="HEUREKA_CPC">
+                        <choice>
+                            <data type="decimal">
+                                <param name="fractionDigits">2</param>
+                                <param name="minExclusive">0</param>
+                            </data>
+                            <empty />
+                        </choice>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="ZBOZI_HIDDEN">
+                        <data type="boolean" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="ZBOZI_CPC">
+                        <choice>
+                            <data type="decimal">
+                                <param name="fractionDigits">2</param>
+                                <param name="minExclusive">0</param>
+                            </data>
+                            <empty />
+                        </choice>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="ZBOZI_SEARCH_CPC">
+                        <choice>
+                            <data type="decimal">
+                                <param name="fractionDigits">2</param>
+                                <param name="minExclusive">0</param>
+                            </data>
+                            <empty />
+                        </choice>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="ARUKERESO_HIDDEN">
+                        <data type="boolean" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="ARUKERESO_MARKETPLACE_HIDDEN">
+                        <data type="boolean" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="DECIMAL_COUNT">
+                        <data type="integer">
+                            <param name="totalDigits">1</param>
+                        </data>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="NEGATIVE_AMOUNT">
+                        <data type="boolean" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="UNIT_OF_MEASURE">
+                        <interleave>
+                            <optional>
+                                <element name="PACKAGE_AMOUNT">
+                                    <choice>
+                                        <ref name="unsignedAmountDatatype" />
+                                        <empty />
+                                    </choice>
+                                </element>
+                            </optional>
+                            <optional>
+                                <element name="PACKAGE_AMOUNT_UNIT">
+                                    <choice>
+                                        <ref name="measureUnitTypeDatatype" />
+                                        <empty />
+                                    </choice>
+                                </element>
+                            </optional>
+                            <optional>
+                                <element name="MEASURE_AMOUNT">
+                                    <choice>
+                                        <ref name="unsignedAmountDatatype" />
+                                        <empty />
+                                    </choice>
+                                </element>
+                            </optional>
+                            <optional>
+                                <element name="MEASURE_AMOUNT_UNIT">
+                                    <choice>
+                                        <ref name="measureUnitTypeDatatype" />
+                                        <empty />
+                                    </choice>
+                                </element>
+                            </optional>
+                        </interleave>
+                    </element>
+                </optional>
+
+                <optional>
+                    <element name="PURCHASE_VAT">
+                        <ref name="vatDatatype" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="PURCHASE_PRICE_INCL_VAT">
+                        <data type="boolean" />
+                    </element>
+                </optional>
+
+                <!-- pricelist_prices - default pricelist -->
+                <optional>
+                    <element name="PRICE_RATIO">
+                        <data type="decimal">
+                            <param name="totalDigits">9</param>
+                            <param name="fractionDigits">3</param>
+                        </data>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="MIN_PRICE_RATIO">
+                        <data type="decimal">
+                            <param name="totalDigits">9</param>
+                            <param name="fractionDigits">3</param>
+                            <param name="minInclusive">0</param>
+                            <param name="maxInclusive">1</param>
+                        </data>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="ACTION_PRICE">
+                        <choice>
+                            <ref name="priceDatatype" />
+                            <empty />
+                        </choice>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="ACTION_PRICE_FROM">
+                        <data type="date" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="ACTION_PRICE_UNTIL">
+                        <data type="date" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="RECYCLING_FEE">
+                        <choice>
+                            <ref name="priceDatatype" />
+                            <empty />
+                        </choice>
+                    </element>
+                </optional>
+                <choice>
+                    <empty/>
+                    <element name="RECYCLING_FEE_CATEGORY">
+                        <empty/>
+                    </element>
+                    <group>
+                        <element name="RECYCLING_FEE_CATEGORY">
+                            <empty/>
+                        </element>
+                        <element name="RECYCLING_FEE_PRICE">
+                            <empty/>
+                        </element>
+                        <element name="RECYCLING_FEE_CURRENCY">
+                            <empty/>
+                        </element>
+                        <element name="RECYCLING_FEE_TYPE">
+                            <empty/>
+                        </element>
+                    </group>
+                    <group>
+                        <element name="RECYCLING_FEE_CATEGORY">
+                            <data type="string" />
+                        </element>
+                        <element name="RECYCLING_FEE_PRICE">
+                            <choice>
+                                <ref name="priceDatatype" />
+                                <empty />
+                            </choice>
+                        </element>
+                        <element name="RECYCLING_FEE_CURRENCY">
+                            <ref name="currencyDatatype" />
+                        </element>
+                        <element name="RECYCLING_FEE_TYPE">
+                            <choice>
+                                <value type="integer">1</value>
+                                <value type="integer">2</value>
+                            </choice>
+                        </element>
+                    </group>
+                </choice>
+                <optional>
+                    <element name="APPLY_LOYALTY_DISCOUNT">
+                        <data type="boolean" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="APPLY_VOLUME_DISCOUNT">
+                        <data type="boolean" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="APPLY_QUANTITY_DISCOUNT">
+                        <data type="boolean" />
+                    </element>
+                </optional>
+                <optional>
+                    <element name="APPLY_DISCOUNT_COUPON">
+                        <data type="boolean" />
+                    </element>
+                </optional>
+
+                <!-- pricelist_prices - n-th pricelist -->
+                <optional>
+                    <element name="PRICELISTS">
+                        <zeroOrMore>
+                            <element name="PRICELIST">
+                                <interleave>
+                                    <element name="TITLE">
+                                        <data type="string">
+                                            <param name="maxLength">128</param>
+                                        </data>
+                                    </element>
+                                    <optional>
+                                        <element name="CURRENCY">
+                                            <ref name="currencyDatatype" />
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="VAT">
+                                            <ref name="vatDatatype" />
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="PRICE">
+                                            <choice>
+                                                <ref name="priceDatatype" />
+                                                <empty />
+                                            </choice>
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="PURCHASE_PRICE">
+                                            <choice>
+                                                <ref name="priceDatatype" />
+                                                <empty />
+                                            </choice>
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="STANDARD_PRICE">
+                                            <choice>
+                                                <ref name="priceDatatype" />
+                                                <empty />
+                                            </choice>
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="PRICE_VAT">
+                                            <ref name="priceDatatype" />
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="PRICE_RATIO">
+                                            <data type="decimal">
+                                                <param name="totalDigits">9</param>
+                                                <param name="fractionDigits">3</param>
+                                            </data>
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="MIN_PRICE_RATIO">
+                                            <data type="decimal">
+                                                <param name="totalDigits">9</param>
+                                                <param name="fractionDigits">3</param>
+                                                <param name="minInclusive">0</param>
+                                                <param name="maxInclusive">1</param>
+                                            </data>
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="ACTION_PRICE">
+                                            <choice>
+                                                <ref name="priceDatatype" />
+                                                <empty />
+                                            </choice>
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="ACTION_PRICE_FROM">
+                                            <data type="date" />
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="ACTION_PRICE_UNTIL">
+                                            <data type="date" />
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="RECYCLING_FEE">
+                                            <choice>
+                                                <ref name="priceDatatype" />
+                                                <empty />
+                                            </choice>
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="FREE_SHIPPING">
+                                            <data type="boolean" />
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="FREE_BILLING">
+                                            <data type="boolean" />
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="APPLY_LOYALTY_DISCOUNT">
+                                            <data type="boolean" />
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="APPLY_VOLUME_DISCOUNT">
+                                            <data type="boolean" />
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="APPLY_QUANTITY_DISCOUNT">
+                                            <data type="boolean" />
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="APPLY_DISCOUNT_COUPON">
+                                            <data type="boolean" />
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="MINIMAL_AMOUNT">
+                                            <choice>
+                                                <ref name="amountDatatype" />
+                                                <empty />
+                                            </choice>
+                                        </element>
+                                    </optional>
+                                    <optional>
+                                        <element name="MAXIMAL_AMOUNT">
+                                            <choice>
+                                                <ref name="amountDatatype" />
+                                                <empty />
+                                            </choice>
+                                        </element>
+                                    </optional>
+                                </interleave>
+                            </element>
+                        </zeroOrMore>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="OSS_TAX_RATES">
+                        <zeroOrMore>
+                            <element name="OSS_TAX_RATE">
+                                <interleave>
+                                    <element name="TAX_COUNTRY">
+                                        <choice>
+                                            <value type="string">AT</value>
+                                            <value type="string">BE</value>
+                                            <value type="string">BG</value>
+                                            <value type="string">CY</value>
+                                            <value type="string">CZ</value>
+                                            <value type="string">DE</value>
+                                            <value type="string">DK</value>
+                                            <value type="string">EE</value>
+                                            <value type="string">ES</value>
+                                            <value type="string">FI</value>
+                                            <value type="string">FR</value>
+                                            <value type="string">GR</value>
+                                            <value type="string">HR</value>
+                                            <value type="string">HU</value>
+                                            <value type="string">IE</value>
+                                            <value type="string">IT</value>
+                                            <value type="string">LT</value>
+                                            <value type="string">LU</value>
+                                            <value type="string">LV</value>
+                                            <value type="string">MT</value>
+                                            <value type="string">NL</value>
+                                            <value type="string">PL</value>
+                                            <value type="string">PT</value>
+                                            <value type="string">RO</value>
+                                            <value type="string">SE</value>
+                                            <value type="string">SI</value>
+                                            <value type="string">SK</value>
+                                            <value type="string">RE</value>
+                                            <value type="string">XI</value>
+                                        </choice>
+                                    </element>
+                                    <element name="TAX_RATE_LEVEL">
+                                        <choice>
+                                            <value type="string">low</value>
+                                            <value type="string">high</value>
+                                            <value type="string">third</value>
+                                            <value type="string">none</value>
+                                            <empty />
+                                        </choice>
+                                    </element>
+                                </interleave>
+                            </element>
+                        </zeroOrMore>
+                    </element>
+                </optional>
+            </interleave>
+        </define>
+    </include>
+
+</grammar>

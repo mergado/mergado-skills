@@ -1,0 +1,21 @@
+{
+  "name": "mergado-google-ads-optimization",
+  "version": "1.0.0",
+  "description": "Content and marketing optimization of a Google Shopping feed in Mergado, beyond the technical audit. Diagnoses nine pillars (segmentation, categories, feed cleanliness, title and description quality, identifiers, variants, images, shipping, performance segmentation), reports findings with their impact, and after user approval creates the corresponding Mergado rules.",
+  "author": {
+    "name": "Mergado",
+    "url": "https://github.com/mergado"
+  },
+  "homepage": "https://github.com/mergado/mergado-skills",
+  "repository": "https://github.com/mergado/mergado-skills",
+  "license": "MIT",
+  "keywords": [
+    "mergado",
+    "google-shopping",
+    "google-ads",
+    "merchant-center",
+    "custom-label",
+    "feed-optimization",
+    "skill"
+  ]
+}

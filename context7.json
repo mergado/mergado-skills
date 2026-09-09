@@ -2,7 +2,15 @@
   "url": "https://context7.com/mergado/mergado-skills",
   "public_key": "pk_o0NYy3vOeRGVA4ENJxdrt",
   "folders": [
-    "plugins/mergado-asistent/skills/mergado-asistent"
+    "plugins/mergado-asistent/skills/mergado-asistent",
+    "plugins/ai-visibility-audit/skills/ai-visibility-audit",
+    "plugins/audit-projektu/skills/audit-projektu",
+    "plugins/mergado-campaign-backup/skills/mergado-campaign-backup",
+    "plugins/mergado-google-ads-optimization/skills/mergado-google-ads-optimization",
+    "plugins/mergado-heureka-optimization/skills/mergado-heureka-optimization",
+    "plugins/mergado-meta-optimization/skills/mergado-meta-optimization",
+    "plugins/mergado-project-auto-backup/skills/mergado-project-auto-backup",
+    "plugins/shoptet-feed-doctor/skills/shoptet-feed-doctor"
   ],
   "excludeFolders": [
     ".claude-plugin"

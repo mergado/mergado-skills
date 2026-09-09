@@ -1,0 +1,21 @@
+{
+  "name": "audit-projektu",
+  "version": "1.0.1",
+  "description": "Read-only logical and operational audit of a feed project across Mergado and its extensions (Pricing Fox, Bidding Fox, Feed Image Editor). Catalogue of 145 checks looking for nonsense in the data, contradictions between the name of a query or rule and its actual content, duplicate and dead rules, wrong rule order and cross-app conflicts between channels. Extensions that are unavailable or not enabled on the project are skipped and recorded in the report as unchecked.",
+  "author": {
+    "name": "Mergado",
+    "url": "https://github.com/mergado"
+  },
+  "homepage": "https://github.com/mergado/mergado-skills",
+  "repository": "https://github.com/mergado/mergado-skills",
+  "license": "MIT",
+  "keywords": [
+    "mergado",
+    "audit",
+    "feed",
+    "pricing-fox",
+    "bidding-fox",
+    "feed-image-editor",
+    "skill"
+  ]
+}

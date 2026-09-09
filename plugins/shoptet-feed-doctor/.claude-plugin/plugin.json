@@ -1,0 +1,21 @@
+{
+  "name": "shoptet-feed-doctor",
+  "version": "1.0.0",
+  "description": "Validates, diagnoses and fixes Shoptet product feeds (Shoptet Kompletní and Dodavatelský XML formats) — local RNG validation, decoding the misleading Shoptet validator messages, correct element placement for product variants, merging standalone items into variants, and Mergado project and rule setup for Shoptet outputs.",
+  "author": {
+    "name": "Mergado",
+    "url": "https://github.com/mergado"
+  },
+  "homepage": "https://github.com/mergado/mergado-skills",
+  "repository": "https://github.com/mergado/mergado-skills",
+  "license": "MIT",
+  "keywords": [
+    "mergado",
+    "shoptet",
+    "feed-validation",
+    "rng",
+    "variants",
+    "xml",
+    "skill"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "mergado-campaign-backup",
+  "version": "1.0.0",
+  "description": "Backs up the setup of a seasonal campaign (Black Friday, Cyber Monday, Christmas) in a Mergado project — the specific rules created for that campaign, together with notes on what worked and what to do differently next time. Runs on demand, not on a timer.",
+  "author": {
+    "name": "Mergado",
+    "url": "https://github.com/mergado"
+  },
+  "homepage": "https://github.com/mergado/mergado-skills",
+  "repository": "https://github.com/mergado/mergado-skills",
+  "license": "MIT",
+  "keywords": [
+    "mergado",
+    "backup",
+    "campaign",
+    "black-friday",
+    "seasonal",
+    "skill"
+  ]
+}

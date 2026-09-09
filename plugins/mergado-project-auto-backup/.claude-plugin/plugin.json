@@ -1,0 +1,20 @@
+{
+  "name": "mergado-project-auto-backup",
+  "version": "1.0.0",
+  "description": "Backs up a Mergado project's setup (rules, queries, variables, custom elements) to JSON. On first run it asks about storage, frequency and retention, then registers itself as a recurring scheduled task — a reliable way back when a larger change to the rules breaks something.",
+  "author": {
+    "name": "Mergado",
+    "url": "https://github.com/mergado"
+  },
+  "homepage": "https://github.com/mergado/mergado-skills",
+  "repository": "https://github.com/mergado/mergado-skills",
+  "license": "MIT",
+  "keywords": [
+    "mergado",
+    "backup",
+    "scheduled-task",
+    "json",
+    "disaster-recovery",
+    "skill"
+  ]
+}

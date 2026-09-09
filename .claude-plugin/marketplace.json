@@ -1,7 +1,7 @@
 {
   "name": "mergado-skills",
   "description": "Mergado Claude skills marketplace — shared skills for working with Mergado Editor and product feeds.",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "owner": {
     "name": "Mergado",
     "url": "https://github.com/mergado"
@@ -13,7 +13,62 @@
       "description": "Assistant for Mergado Editor users — translates real business problems (Google Shopping errors, missing colours, hidden products) into actions via the Mergado MCP.",
       "version": "2.1.0",
       "category": "productivity"
+    },
+    {
+      "name": "ai-visibility-audit",
+      "source": "./plugins/ai-visibility-audit",
+      "description": "Audits an online store's readiness to be discovered, cited and recommended by AI chat assistants and shopping agents. Combines a live probe of the public website with internal data from Mergado, Merchant Center and Search Console.",
+      "version": "1.0.0",
+      "category": "audit"
+    },
+    {
+      "name": "audit-projektu",
+      "source": "./plugins/audit-projektu",
+      "description": "Read-only logical and operational audit of a feed project across Mergado and its extensions (Pricing Fox, Bidding Fox, Feed Image Editor). 145 checks for data nonsense, name-versus-content contradictions, duplicate and dead rules and cross-app conflicts.",
+      "version": "1.0.1",
+      "category": "audit"
+    },
+    {
+      "name": "mergado-campaign-backup",
+      "source": "./plugins/mergado-campaign-backup",
+      "description": "Backs up the rules of a seasonal campaign (Black Friday, Christmas) together with notes on what worked, so last year's setup can be found before the next season. Runs on demand.",
+      "version": "1.0.0",
+      "category": "backup"
+    },
+    {
+      "name": "mergado-google-ads-optimization",
+      "source": "./plugins/mergado-google-ads-optimization",
+      "description": "Content and marketing optimization of a Google Shopping feed in Mergado. Diagnoses nine pillars, reports findings with their impact and, after approval, creates the corresponding Mergado rules.",
+      "version": "1.0.0",
+      "category": "optimization"
+    },
+    {
+      "name": "mergado-heureka-optimization",
+      "source": "./plugins/mergado-heureka-optimization",
+      "description": "Content and marketing optimization of a Heureka feed in Mergado. Diagnoses nine pillars including product pairing and CPC segmentation, and after approval creates the corresponding Mergado rules.",
+      "version": "1.0.0",
+      "category": "optimization"
+    },
+    {
+      "name": "mergado-meta-optimization",
+      "source": "./plugins/mergado-meta-optimization",
+      "description": "Content and marketing optimization of a Meta (Facebook, Instagram) catalog feed in Mergado. Diagnoses nine pillars including custom_label segmentation and stock availability, and after confirmation creates the corresponding Mergado rules.",
+      "version": "1.0.0",
+      "category": "optimization"
+    },
+    {
+      "name": "mergado-project-auto-backup",
+      "source": "./plugins/mergado-project-auto-backup",
+      "description": "Backs up a Mergado project's rules, queries, variables and custom elements to JSON and registers itself as a recurring scheduled task with configurable storage, frequency and retention.",
+      "version": "1.0.0",
+      "category": "backup"
+    },
+    {
+      "name": "shoptet-feed-doctor",
+      "source": "./plugins/shoptet-feed-doctor",
+      "description": "Validates, diagnoses and fixes Shoptet product feeds — local RNG validation, decoding the misleading Shoptet validator messages, correct element placement for variants and merging standalone items into variants.",
+      "version": "1.0.0",
+      "category": "diagnostics"
     }
   ]
 }
-

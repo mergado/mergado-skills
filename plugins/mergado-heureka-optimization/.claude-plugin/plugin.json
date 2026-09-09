@@ -1,0 +1,21 @@
+{
+  "name": "mergado-heureka-optimization",
+  "version": "1.0.0",
+  "description": "Content and marketing optimization of a Heureka feed in Mergado, beyond the technical audit. Diagnoses nine pillars (product pairing, CPC and bidding segmentation, feed cleanliness, delivery, variants, conversion extra elements, ITEM_TYPE, images, performance and repricing), reports findings with their impact, and after approval creates the corresponding Mergado rules.",
+  "author": {
+    "name": "Mergado",
+    "url": "https://github.com/mergado"
+  },
+  "homepage": "https://github.com/mergado/mergado-skills",
+  "repository": "https://github.com/mergado/mergado-skills",
+  "license": "MIT",
+  "keywords": [
+    "mergado",
+    "heureka",
+    "product-pairing",
+    "cpc",
+    "item-type",
+    "feed-optimization",
+    "skill"
+  ]
+}

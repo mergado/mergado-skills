@@ -1,6 +1,6 @@
 {
   "name": "mergado-meta-optimization",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Content and marketing optimization of a Meta (Facebook and Instagram) catalog feed in Mergado, beyond the technical audit. Diagnoses nine pillars (custom_label and custom_number segmentation, categories, feed cleanliness and status, variants, identifiers, images, stock availability, pixel matching awareness, performance segmentation), reports findings with their impact, and after confirmation creates the corresponding Mergado rules.",
   "author": {
     "name": "Mergado",

@@ -39,21 +39,21 @@
       "name": "mergado-google-ads-optimization",
       "source": "./plugins/mergado-google-ads-optimization",
       "description": "Content and marketing optimization of a Google Shopping feed in Mergado. Diagnoses nine pillars, reports findings with their impact and, after approval, creates the corresponding Mergado rules.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "optimization"
     },
     {
       "name": "mergado-heureka-optimization",
       "source": "./plugins/mergado-heureka-optimization",
       "description": "Content and marketing optimization of a Heureka feed in Mergado. Diagnoses nine pillars including product pairing and CPC segmentation, and after approval creates the corresponding Mergado rules.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "optimization"
     },
     {
       "name": "mergado-meta-optimization",
       "source": "./plugins/mergado-meta-optimization",
       "description": "Content and marketing optimization of a Meta (Facebook, Instagram) catalog feed in Mergado. Diagnoses nine pillars including custom_label segmentation and stock availability, and after confirmation creates the corresponding Mergado rules.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "optimization"
     },
     {

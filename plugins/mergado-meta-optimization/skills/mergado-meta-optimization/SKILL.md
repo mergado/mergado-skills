@@ -50,7 +50,9 @@ technically broken feed is wasted work, so establish the technical baseline firs
 When the Mergado MCP is connected, run the audit through it rather than sending the user
 elsewhere: it exposes tools for listing existing audits, starting a new one, following it to
 completion and reading its findings. Take the arguments and the sequencing from those tools'
-own descriptions — they are authoritative and current, this file is not. One thing worth
+own descriptions rather than from this file, which ages faster — but treat them as a strong
+default, not as proof: one tool description has been seen to document a syntax the server
+wrote into the feed literally. Check the first result before building on it. One thing worth
 insisting on: tell the audit which channel format to judge the feed against instead of letting
 it guess. The guess is structural, and a feed judged by the wrong rulebook produces confident
 findings that answer a different question than the user asked.

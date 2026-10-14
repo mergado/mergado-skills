@@ -1,0 +1,21 @@
+{
+  "name": "mergado-param-enrichment",
+  "version": "1.0.0",
+  "description": "Fills in missing product parameters (colour, size, material, composition, capacity) in a Mergado project by extracting them from text the project already has — the product name first, then structured text such as a specification, the description last. Builds one regex or value dictionary per parameter instead of calling AI per product, refuses to fill conditional or multi-component values blindly, and also detects parameters that are filled but truncated on the way to the output.",
+  "author": {
+    "name": "Mergado",
+    "url": "https://github.com/mergado"
+  },
+  "homepage": "https://github.com/mergado/mergado-skills",
+  "repository": "https://github.com/mergado/mergado-skills",
+  "license": "MIT",
+  "keywords": [
+    "mergado",
+    "product-parameters",
+    "data-enrichment",
+    "regex",
+    "heureka",
+    "shopify",
+    "skill"
+  ]
+}

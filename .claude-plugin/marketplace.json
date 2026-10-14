@@ -1,7 +1,7 @@
 {
   "name": "mergado-skills",
   "description": "Mergado Claude skills marketplace — shared skills for working with Mergado Editor and product feeds.",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "owner": {
     "name": "Mergado",
     "url": "https://github.com/mergado"
@@ -55,6 +55,13 @@
       "description": "Content and marketing optimization of a Meta (Facebook, Instagram) catalog feed in Mergado. Diagnoses nine pillars including custom_label segmentation and stock availability, and after confirmation creates the corresponding Mergado rules.",
       "version": "1.0.0",
       "category": "optimization"
+    },
+    {
+      "name": "mergado-param-enrichment",
+      "source": "./plugins/mergado-param-enrichment",
+      "description": "Fills in missing product parameters from text the project already has — name first, then specification, then description — with one regex or value dictionary per parameter instead of AI per product. Refuses to fill conditional or multi-component values blindly and detects parameters truncated on the way to the output.",
+      "version": "1.0.0",
+      "category": "enrichment"
     },
     {
       "name": "mergado-project-auto-backup",

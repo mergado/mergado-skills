@@ -13,6 +13,7 @@ Shared [Claude Code](https://code.claude.com) skills for working with **Mergado 
 | **mergado-google-ads-optimization** v1.0.0 | Content and marketing optimization of a Google Shopping feed. Diagnoses nine pillars, reports findings with their impact and, after approval, creates the corresponding Mergado rules. |
 | **mergado-heureka-optimization** v1.0.0 | The same for a Heureka feed — product pairing, CPC and bidding segmentation, delivery, conversion extra elements, `ITEM_TYPE`. |
 | **mergado-meta-optimization** v1.0.0 | The same for a Meta (Facebook, Instagram) catalog — `custom_label` and `custom_number` segmentation, categories, stock availability, pixel matching. |
+| **mergado-param-enrichment** v1.0.0 | Fills in missing product parameters (colour, size, material, composition) from text the project already has — name first, then specification, then description — using one regex or value dictionary per parameter instead of AI per product. Refuses to fill conditional or multi-component values blindly and reports parameters that are filled but truncated on the way to the output. Czech. |
 | **mergado-project-auto-backup** v1.0.0 | Backs up a project's rules, queries, variables and custom elements to JSON and registers itself as a recurring scheduled task with configurable storage, frequency and retention. Czech. |
 | **mergado-campaign-backup** v1.0.0 | Backs up the rules of a seasonal campaign (Black Friday, Christmas) together with notes on what worked, so last year's setup can be found before the next season. Runs on demand. Czech. |
 

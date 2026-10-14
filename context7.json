@@ -9,6 +9,7 @@
     "plugins/mergado-google-ads-optimization/skills/mergado-google-ads-optimization",
     "plugins/mergado-heureka-optimization/skills/mergado-heureka-optimization",
     "plugins/mergado-meta-optimization/skills/mergado-meta-optimization",
+    "plugins/mergado-param-enrichment/skills/mergado-param-enrichment",
     "plugins/mergado-project-auto-backup/skills/mergado-project-auto-backup",
     "plugins/shoptet-feed-doctor/skills/shoptet-feed-doctor"
   ],

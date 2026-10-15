@@ -54,6 +54,11 @@ Context7 indexes markdown from the folders listed in [`context7.json`](./context
 mergado-skills/
 ├── .claude-plugin/
 │   └── marketplace.json          # marketplace manifest (list of plugins)
+├── .github/
+│   └── workflows/
+│       └── check.yml              # runs scripts/check.js on every pull request
+├── scripts/
+│   └── check.js                   # content check for the repository (run it before a pull request)
 ├── plugins/
 │   └── <plugin-name>/
 │       ├── .claude-plugin/
@@ -78,6 +83,9 @@ One plugin holds one skill and both share the same name. Supporting material liv
 2. Add an entry to the `plugins` array in `.claude-plugin/marketplace.json` and bump its `version`.
 3. Add the skill folder to `folders` in `context7.json`.
 4. Add a row to the table above, and to **Extra requirements** if the skill needs more than the Mergado MCP.
+5. Run `git add -A`, then `node scripts/check.js .` and fix every `ERROR`. The same check runs on every pull request. It catches what `claude plugin validate` does not: versions out of sync between `plugin.json`, `marketplace.json` and this README, names that do not match the folder, descriptions over 1024 characters or containing `<` / `>`, links to files that do not exist, plugins missing from the manifests, CRLF line endings, and references to skills that do not exist.
+
+Changed a skill that is already published? Bump its `version` in all three places (`plugin.json`, `marketplace.json`, the README row). Claude Code only delivers a new copy of a plugin when its version changes.
 
 Keep `SKILL.md` itself lean — it loads in full every time the skill triggers. Detail belongs in `references/`.
 

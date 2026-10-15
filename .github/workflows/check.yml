@@ -1,0 +1,23 @@
+name: Check skills repository
+
+# Runs scripts/check.js on every pull request and on every push to main.
+# The check is informational until a repository admin makes it a required status check
+# (Settings, Branches, branch protection rule for main, "Require status checks to pass").
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check plugins, manifests, versions, links and line endings
+        run: node scripts/check.js .

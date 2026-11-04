@@ -6,7 +6,7 @@ Shared [Claude Code](https://code.claude.com) skills for working with **Mergado 
 
 | Plugin | Description |
 |---|---|
-| **mergado-asistent** v2.1.0 | Assistant for Mergado Editor users — translates real business problems (Google Shopping errors, missing colours, hidden products) into actions via the Mergado MCP. Familiarizes itself with the project first, advises using online-store owner terminology, and only executes changes after user confirmation. |
+| **mergado-asistent** v2.2.0 | Assistant for Mergado Editor users — translates real business problems (Google Shopping errors, missing colours, hidden products) into actions via the Mergado MCP. Familiarizes itself with the project first, advises using online-store owner terminology, and only executes changes after user confirmation. |
 | **audit-projektu** v1.0.1 | Read-only logical and operational audit of a feed project across Mergado and its extensions (Pricing Fox, Bidding Fox, Feed Image Editor). A catalogue of 145 checks looking for nonsense in the data, contradictions between the name of a query or rule and its content, duplicate and dead rules, wrong rule order and cross-app conflicts. Czech. |
 | **ai-visibility-audit** v1.0.0 | Audits an online store's readiness to be discovered, cited and recommended by AI chat assistants and shopping agents (ChatGPT, Claude, Gemini, Perplexity, AI Overviews). Combines a live probe of the public website with internal data from every connected source. |
 | **shoptet-feed-doctor** v1.0.0 | Validates, diagnoses and fixes Shoptet product feeds (Kompletní / Dodavatelský XML) — local RNG validation, decoding the misleading Shoptet validator messages, correct element placement for variants and merging standalone items into variants. |

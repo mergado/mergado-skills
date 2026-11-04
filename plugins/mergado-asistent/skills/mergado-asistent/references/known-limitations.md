@@ -12,7 +12,7 @@ _Verified live against the Mergado MCP server on 2026-07-10. Items that can't be
 ## Silent no-ops / wrong results (looks OK but isn't — the dangerous ones)
 - **`values_to_extract` is ignored** (verified) — `list_project_products` / `query_products` return the **full** product tree (a product came back with ~27 elements); `extracted_values` is `null`. Use `limit`; for one field across many products, parse the payload locally.
 - **Data File Import (CSV) — matching column dropped** (verified) — `file_matching_element_path` / `project_matching_element_path` come back `null`; the import then matches nothing yet returns `success`. Workaround in `rules-cookbook.md`.
-- **Data File Import — upload (base64)** (verified) — silently discarded (`upload_control: null`). Use a public `source_url` instead.
+- **Data File Import — upload (base64)** (verified) — silently discarded (`upload_control: null`). Use a `source_url` the user provides instead (see `rules-cookbook.md`, Data File Import).
 - **Data File Import — duplicate CSV column names** (reported) — only the last column is kept; the rest is lost silently (multi-value data loss).
 
 ## Query state (fresh queries)
@@ -29,7 +29,7 @@ _Verified live against the Mergado MCP server on 2026-07-10. Items that can't be
 - **Stats audits** (`list_shop_stats_audits`, `get_stats_audit`, `list_stats_audit_issues`) — return empty / 404 even when audits exist in the UI. Tell the user the MCP can't read stats audits yet; do not report their absence as "no audits".
 
 ## Behaviour & schema notes
-- **No `update_rule`** (verified) — a rule can't be edited or activated after creation. Recreate it (with `applies: true`) or use the editor.
+- **`update_rule`** (verified 2026-11-04) — pauses or resumes a rule and changes its name, note, configuration or schedule. `data` and `schedule` replace the stored value as a whole, so read the rule with `get_rule` first.
 - **`create_element`** succeeds but does not return the new element id (verified) — re-list with `list_project_elements`.
 - **`matching_mode`** (data import) — the schema description says `exact / partial / prefix / suffix`, but the real enum is `xid / exact / contains` (verified). Use `exact` or `contains`.
 - **`get_apply_logs` / `get_import_logs`** show `processed_products: 0` without a reason (reported) — check the matching column/element yourself.

@@ -29,18 +29,18 @@ Use the **name** column when talking to users (it matches the Mergado UI). The `
 | Cost Per Click Pricing | `create_bidding_rule` |
 
 ## Creating a rule — general principles
-Each `create_*_rule` tool defines its own required fields and payload structure in its schema and description — **the schema is authoritative and may evolve, so read it before calling** rather than relying on this list. Principles that hold across rule types:
+Each `create_*_rule` tool lists its required fields and payload structure in its schema and description. **The schema may evolve, so read it before calling** rather than relying on this list. Principles that hold across rule types:
 - `element_path` must point to an element that **exists** in the project (verify with `list_project_elements`).
 - `priority` controls ordering (numeric string; lower priority is applied earlier). If the server does not assign one automatically, pass it explicitly (e.g. `"100"`).
 - `queries` scope the rule to products — a list of objects `[{"id": "<query_id>"}]`.
-- `applies: true` makes the rule take effect. There is no `update_rule`, so an inactive or misconfigured rule is replaced with `delete_rule` + create.
+- `applies: true` makes the rule take effect. `update_rule` pauses or resumes a rule and fixes its configuration in place (read it with `get_rule` first, `data` is replaced as a whole). Only a change of rule type, position or queries needs another tool.
 - **Set Product Parameters** (`create_batch_param_rule`): in `settings`, `ep_param_name` / `ep_param_value` must be the **full nested path** (e.g. `g:product_detail | g:attribute_name`), not the bare child name.
 
 ## Rule-specific gotchas (observed in real sessions / UI)
 - **Bulk Rewriting by Values (`create_batch_rewriting_values_rule`): the two element-path fields are reversed vs. their names.** Top-level `element_path` = where the value is **written**; `data.target_element_path` = where the value is **searched**. Getting them the wrong way can silently write into the wrong element (even a pairing key). After creating, read the rule back with `get_rule` and verify the effect on a sample after the next rebuild.
 - **Rename Categories in Bulk (`create_categories_rule`) is bound to the format's category element** (e.g. `g:google_product_category`) and **ignores a custom `element_path`** (the API even echoes it back). To map into a custom element, use *Bulk Rewriting by Values* instead.
 - **Add a Value to a Multi-Value Element (`create_create_product_value_rule`) fills only empty values** — it never overwrites. Use it as a fallback: give it a later (higher) priority than rules that write specific values.
-- **No `update_rule`** — to change a rule you `delete_rule` + create again (you lose its id).
+- **Changing an existing rule:** use `update_rule` (keeps its id, position and queries). A different rule type means creating a new rule; position goes through `reorder_rules`, products through `assign_query_to_rule` / `retract_query_from_rule`.
 
 ## Recipes
 - **GTIN missing (GMC):** check `g:gtin` in `list_project_elements`. Fix with *Rewrite* (map from `EAN`) or *Data File Import* (CSV of GTINs). If a product genuinely has no GTIN/EAN, setting `g:identifier_exists = no` is an option — but **ask the user first**; even custom products can have an EAN.
@@ -55,7 +55,7 @@ Each `create_*_rule` tool defines its own required fields and payload structure 
 1. Inspect target data with `list_project_elements`.
 2. **Ask the user before creating new elements** with `create_element` for incoming data that has no home. (`create_element` doesn't return the new id — re-list to find it.)
 3. **It is destructive:** a colliding target element name is **overwritten** (often `PRICE_VAT`, `DESCRIPTION`).
-4. **Use a public `source_url`** (e.g. a Google Sheet CSV export `?format=csv&gid=`). Base64 **upload is silently discarded**.
+4. **The `source_url` must point to a file the user provides and is allowed to share.** Mergado has to be able to download it, so it is usually a link anyone can open (e.g. a Google Sheet CSV export `?format=csv&gid=`). Tell the user that such a link is readable by anyone who has it, and get their confirmation before creating the import. Base64 **upload is silently discarded**.
 5. **CSV matching is by header name = element path.** `file_matching_element_path` / `project_matching_element_path` are dropped for CSV (returned `null`), so if the CSV key column has a different name than the project element, the import matches nothing (0 processed, still reports "success"). Workaround: `create_element` named exactly like the CSV column → `create_batch_copy_values_rule` (real key → that element, low priority) → `create_data_import_rule` with `match_by_input_values: false`.
 6. **`match_by_input_values`:** `true` = match on original input values only (an element filled by a rule will not match); `false` = match on current values after earlier rules. Use `false` when the key is filled by a copy rule.
 7. **Duplicate CSV column names lose data** — only the last is kept; don't use CSV import for multi-value elements.

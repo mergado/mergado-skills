@@ -11,7 +11,7 @@
       "name": "mergado-asistent",
       "source": "./plugins/mergado-asistent",
       "description": "Assistant for Mergado Editor users — translates real business problems (Google Shopping errors, missing colours, hidden products) into actions via the Mergado MCP.",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "category": "productivity"
     },
     {

@@ -26,7 +26,7 @@ Pair products with stable keys — `g:id` / `ITEM_ID`, `g:gtin` / `EAN`, `g:item
 A shop can hold several related projects (e.g. a product feed and a separate reviews feed) — check `list_shop_projects` before looking for data outside Mergado. A 403/404 on a project usually means a wrong id; re-check it via `list_shop_projects` before concluding it is a permissions problem.
 
 ## Back up the structure before larger changes
-There is no `update_rule` and deletes are irreversible — before a bigger intervention, snapshot the current structure (`list_project_rules`, `list_project_queries`, `list_project_variables`, `list_project_elements`) so anything removed can be recreated.
+Deletes are irreversible and rule changes cannot be undone — before a bigger intervention, snapshot the current structure (`list_project_rules`, `list_project_queries`, `list_project_variables`, `list_project_elements`) so anything removed can be recreated.
 
 ## Sending a feed to Google — avoid duplicate projects
 If the user already has a Google Merchant Center project in Mergado, do not create a new project from the source URL. Tell them to copy that project's **output feed URL** into GMC.

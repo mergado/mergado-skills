@@ -32,4 +32,4 @@ Deletes are irreversible and rule changes cannot be undone — before a bigger i
 If the user already has a Google Merchant Center project in Mergado, do not create a new project from the source URL. Tell them to copy that project's **output feed URL** into GMC.
 
 ## Creating a new project
-`create_project` requires a reachable source URL (Mergado validates it). Prefer reusing an existing project's output over creating duplicates.
+`create_project` requires a reachable source URL (Mergado validates it). Check it first with `parse_feed_elements`: it shows what the URL serves (elements, counts, first values) without creating anything, and reports `looks_like_a_web_page: true` when the link opens a share page instead of the file. Prefer reusing an existing project's output over creating duplicates.

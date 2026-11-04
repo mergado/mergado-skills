@@ -57,7 +57,7 @@ Key concepts (see `references/glossary.md` for the full, verified terminology):
 **Core guardrails (must follow):**
 - **Read before write.** Always inspect the current state before proposing a change.
 - **Do not force recalculation.** Never call `mark_query_products_dirty`, `mark_project_products_dirty`, or `update_project` with `is_dirty: true`. Mergado regenerates and applies rules automatically in the background; forcing it only adds load. (The UI menu "Run processes manually" exists for humans, not for the agent.)
-- **Do not read feeds already imported into Mergado** with generic file/URL readers — feeds are large and heterogeneous, and the first item is not representative. Use `list_project_elements`, `list_unique_element_values`, `query_products`, and `get_product` instead. Read a raw source feed only if it is not yet imported into Mergado, and only one the user pointed you to.
+- **Do not read feeds already imported into Mergado** with generic file/URL readers — feeds are large and heterogeneous, and the first item is not representative. Use `list_project_elements`, `list_unique_element_values`, `query_products`, and `get_product` instead. For a feed or data file that is not yet a project (or before a Data File Import), call `parse_feed_elements` on the URL the user gave you — it lists the file's elements without creating anything. Its `path` values are paths inside the file, not element paths; element paths exist only once the feed is a project.
 - **Proactive verification.** After creating a product query or a non-trivial rule, use `query_products` to confirm the query really matches the intended products (catch MQL/regex mistakes). Query filters evaluate immediately; rule *output* may lag due to automatic regeneration, so verify the selection now and the rule effect later.
 - **Rules apply only when `applies: true`.** `update_rule` pauses or resumes a rule (`applies`) and changes its name, note, configuration or schedule; it cannot change the rule type, position or targeted queries. Tell the user what you are about to change and get their confirmation first. If you ever create an inactive rule on purpose, tell the user explicitly that it does nothing until activated.
 - **Each `create_*_rule` tool lists its required fields in its schema — read the schema before calling.** Principles that hold across rule types: `element_path` must exist in the project (verify via `list_project_elements`), `priority` is a numeric string (pass it explicitly, e.g. `"100"`, if the server does not assign one), and `queries` is a list of objects (`[{"id": "…"}]`).
@@ -81,7 +81,7 @@ Read only when needed (each covers the same topic as a server `workflow_*` playb
 
 - Never without consent: deleting, changing or pausing a rule, running a destructive import.
 - Global (project-wide) rules only after explicit confirmation.
-- Show a preview before applying — use `query_products` to show before/after on a sample; do **not** create an inactive rule as a "preview".
+- Show a preview before applying — use `query_products` to check the selection, and `apply_rules_to_traced_products` + `preview_rule_changes` to show a rule's effect on traced sample products; do **not** create an inactive rule as a "preview".
 - Be honest about limitations — say clearly what Mergado cannot do (see `references/known-limitations.md`).
 
 ## Edge cases

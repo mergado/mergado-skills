@@ -52,7 +52,7 @@ Each `create_*_rule` tool lists its required fields and payload structure in its
 - **Google AI elements (e.g. `g:question_and_answer`):** write directly to the nested paths with *Bulk Rewriting by Query* rows (`g:question_and_answer | g:question`, `g:question_and_answer | g:answer`). *Set Product Parameters* writes into the format's parameter structure (`g:product_detail`) unless its `ep_*` settings are redirected with **full nested paths** — a naive attempt lands in parameters, not the target element.
 
 ## Data File Import (CSV / XML) — destructive; extra CSV caveats
-1. Inspect target data with `list_project_elements`.
+1. Inspect the source file with `parse_feed_elements` (column or tag names, the pairing key) and the target data with `list_project_elements`. File paths from `parse_feed_elements` are not element paths: `/SHOP/SHOPITEM` becomes the wrapper `SHOP | SHOPITEM`, and `/SHOP/SHOPITEM/ITEM_ID` becomes the key `ITEM_ID`.
 2. **Ask the user before creating new elements** with `create_element` for incoming data that has no home. (`create_element` doesn't return the new id — re-list to find it.)
 3. **It is destructive:** a colliding target element name is **overwritten** (often `PRICE_VAT`, `DESCRIPTION`).
 4. **The `source_url` must point to a file the user provides and is allowed to share.** Mergado has to be able to download it, so it is usually a link anyone can open (e.g. a Google Sheet CSV export `?format=csv&gid=`). Tell the user that such a link is readable by anyone who has it, and get their confirmation before creating the import. Base64 **upload is silently discarded**.

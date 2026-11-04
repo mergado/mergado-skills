@@ -2,15 +2,9 @@
 
 Keep this list up to date as the server changes. When a tool below fails, explain honestly and offer an alternative or the UI route — never fabricate a result.
 
-_Verified live against the Mergado MCP server on 2026-07-10. Items that can't be checked with a single call are marked (reported)._
-
-## Tools that currently fail (verified)
-- **`create_rounding_rule` (Round Numbers)** — HTTP 500. Cannot create rounding rules via the MCP; use the Mergado editor.
-- **`create_feedaudit`** — HTTP 500. A new audit cannot be created via the MCP; reading existing audits works. Point the user to Product Data Audit in the UI.
-- **`mark_project_products_dirty`** — times out (HTTP 599). Do not use it (recalculation is automatic anyway).
+_Verified live against the Mergado MCP server on 2026-07-10, aligned with the server's `workflow_known_limitations` on 2026-11-04. Items that can't be checked with a single call are marked (reported)._
 
 ## Silent no-ops / wrong results (looks OK but isn't — the dangerous ones)
-- **`values_to_extract` is ignored** (verified) — `list_project_products` / `query_products` return the **full** product tree (a product came back with ~27 elements); `extracted_values` is `null`. Use `limit`; for one field across many products, parse the payload locally.
 - **Data File Import (CSV) — matching column dropped** (verified) — `file_matching_element_path` / `project_matching_element_path` come back `null`; the import then matches nothing yet returns `success`. Workaround in `rules-cookbook.md`.
 - **Data File Import — upload (base64)** (verified) — silently discarded (`upload_control: null`). Use a `source_url` the user provides instead (see `rules-cookbook.md`, Data File Import).
 - **Data File Import — duplicate CSV column names** (reported) — only the last column is kept; the rest is lost silently (multi-value data loss).
